@@ -6,7 +6,12 @@ import { spawn } from 'child_process';
 import cors from 'cors';
 import { v2 as cloudinary } from 'cloudinary';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 import { db } from './db.js'; // Note the `.js` extension in ES modules
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
@@ -135,7 +140,7 @@ function extractColors(imagePath, removeBackground = true) {
     setTimeout(() => {
       pythonProcess.kill();
       reject(new Error('Color extraction timed out'));
-    }, 50000); // 30 second timeout
+    }, 50000); // 50 second timeout
   });
 }
 
@@ -219,7 +224,6 @@ app.get('/products', async (req, res) => {
 
         }))
     }});
-    console
     res.json({
       success: true,
       products: products
