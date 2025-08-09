@@ -1,12 +1,13 @@
-const express = require('express');
-const multer = require('multer');
-const path = require('path');
-const db = require('./db').db; // Import the database connection
-const fs = require('fs');
-const { spawn } = require('child_process');
-const cors = require('cors');
-const { v2: cloudinary } = require('cloudinary'); // Fixed import syntax
-const dotenv = require('dotenv');
+import express from 'express';
+import multer from 'multer';
+import path from 'path';
+import fs from 'fs';
+import { spawn } from 'child_process';
+import cors from 'cors';
+import { v2 as cloudinary } from 'cloudinary';
+import dotenv from 'dotenv';
+import { db } from './db.js'; // Note the `.js` extension in ES modules
+
 dotenv.config();
 
 const app = express();
@@ -481,4 +482,4 @@ app.listen(PORT, () => {
   console.log(`🌩️ Cloudinary integration: Active`);
 });
 
-module.exports = app;
+export default app;

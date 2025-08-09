@@ -1,17 +1,17 @@
-FROM node:18-bullseye
+FROM node:18
 
-# Install Python
+# Install Python + pip
 RUN apt-get update && apt-get install -y python3 python3-pip
 
-# Copy requirements and install Python deps
+# Copy and install Python deps
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Copy Node files and install Node deps
-COPY package*.json ./
+# Copy and install Node deps
+COPY package*.json .
 RUN npm install
 
-# Copy rest of the app
+# Copy the rest of the code
 COPY . .
 
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
