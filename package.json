@@ -10,6 +10,7 @@
     "start-server": "nodemon server.js",
     "test": "node test/test-api.js"
   },
+  "type": "module",
   "dependencies": {
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
