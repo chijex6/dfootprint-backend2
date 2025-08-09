@@ -1,0 +1,38 @@
+{
+  "name": "fashion-color-extractor-api",
+  "version": "1.0.0",
+  "description": "Express.js API for extracting dominant colors from fashion images",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "install-python": "python3 -m venv venv && ./venv/bin/pip install -r requirements.txt",
+    "dev": "npm run install-python && npm run start-server",
+    "start-server": "nodemon server.js",
+    "test": "node test/test-api.js"
+  },
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.14.3",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "fashion",
+    "color-extraction",
+    "image-processing",
+    "api",
+    "express"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.8.0"
+  }
+}

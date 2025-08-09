@@ -1,0 +1,7 @@
+Pillow>=9.0.0
+numpy>=1.21.0
+opencv-python>=4.5.0
+scikit-learn>=1.0.0
+webcolors>=1.11.1
+argparse==1.4.0
+requests
