@@ -17,6 +17,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
+console.log('Environment Variables:', {
+    MYSQL_HOST: process.env.MYSQL_HOST,
+    MYSQL_USER: process.env.MYSQL_USER,
+    MYSQL_DATABASE: process.env.MYSQL_DATABASE,
+    MYSQL_PORT: process.env.MYSQL_PORT,
+    CLOUDINARY_NAME: process.env.CLOUDINARY_NAME,
+    CLOUDINARY_KEY: process.env.CLOUDINARY_KEY,
+    CLOUDINARY_SECRET: process.env.CLOUDINARY_SECRET
+});
+
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
     api_key: process.env.CLOUDINARY_KEY,
