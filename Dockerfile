@@ -1,17 +1,48 @@
-FROM node:18-bullseye
+# --------------------------
+# 1. Base Image
+# --------------------------
+FROM python:3.12-slim AS base
 
-# Install Python
-RUN apt-get update && apt-get install -y python3 python3-pip
+# Ensure Python output is sent straight to terminal (no buffering)
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
 
-# Copy requirements and install Python deps
+# --------------------------
+# 2. Working Directory
+# --------------------------
+WORKDIR /app
+
+# --------------------------
+# 3. Install Dependencies
+# --------------------------
+# Upgrade pip and install system dependencies first
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first (for better caching)
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Copy Node files and install Node deps
-COPY package*.json ./
-RUN npm install
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Copy rest of the app
+# --------------------------
+# 4. Copy Application
+# --------------------------
 COPY . .
 
-CMD ["npm", "start"]
+# --------------------------
+# 5. Expose Port
+# --------------------------
+EXPOSE 8000
+
+# --------------------------
+# 6. Start Command (Gunicorn + Uvicorn Workers)
+# --------------------------
+# Adjust workers based on CPU cores: (2 x $cores) + 1
+# Example: 4 cores => workers=9
+CMD ["gunicorn", "main:app", \
+     "-k", "uvicorn.workers.UvicornWorker", \
+     "--bind", "0.0.0.0:8000", \
+     "--workers", "4", \
+     "--timeout", "60"]

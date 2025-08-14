@@ -1,0 +1,682 @@
+PlayerID,Name,Club,Position,Price (£m),Current Form,Selected By (%),ICT Index,Total Points (Current),Goals (Current),Assists (Current),Clean Sheets (Current),Minutes (Current),Last Season,Minutes (Last Season),Goals (Last Season),Assists (Last Season),Clean Sheets (Last Season),Total Points (Last Season)
+1,David Raya Martín,Arsenal,Goalkeeper,5.5,0.0,17.5,76.7,142,0,0,13,3420,2024/25,3420.0,0.0,0.0,13.0,142.0
+2,Kepa Arrizabalaga Revuelta,Arsenal,Goalkeeper,4.5,0.0,1.0,75.8,106,0,0,8,2790,2024/25,2790.0,0.0,0.0,8.0,106.0
+3,Karl Hein,Arsenal,Goalkeeper,4.0,0.0,0.6,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+4,Tommy Setford,Arsenal,Goalkeeper,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+5,Gabriel dos Santos Magalhães,Arsenal,Defender,6.0,0.0,20.5,108.2,117,3,2,10,2363,2024/25,2363.0,3.0,2.0,10.0,117.0
+6,William Saliba,Arsenal,Defender,6.0,0.0,13.7,94.2,130,2,0,12,3039,2024/25,3039.0,2.0,0.0,12.0,130.0
+7,Riccardo Calafiori,Arsenal,Defender,5.5,0.0,0.7,54.6,39,2,1,1,978,2024/25,978.0,2.0,1.0,1.0,39.0
+8,Jurriën Timber,Arsenal,Defender,5.5,0.0,2.3,94.2,114,1,3,11,2415,2024/25,2415.0,1.0,3.0,11.0,114.0
+9,Jakub Kiwior,Arsenal,Defender,5.5,0.0,0.1,39.2,43,1,0,3,1117,2024/25,1117.0,1.0,0.0,3.0,43.0
+10,Myles Lewis-Skelly,Arsenal,Defender,5.5,0.0,4.8,40.0,37,1,0,5,1362,2024/25,1362.0,1.0,0.0,5.0,37.0
+11,Benjamin White,Arsenal,Defender,5.5,0.0,0.8,51.0,50,0,2,5,1195,2024/25,1195.0,0.0,2.0,5.0,50.0
+12,Oleksandr Zinchenko,Arsenal,Defender,5.0,0.0,0.3,24.1,40,0,1,4,518,2024/25,518.0,0.0,1.0,4.0,40.0
+13,Brayden Clarke,Arsenal,Defender,4.0,0.0,0.6,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+14,Maldini Kacurri,Arsenal,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+15,Josh Nichols,Arsenal,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+16,Bukayo Saka,Arsenal,Midfielder,10.0,0.0,17.3,227.9,127,6,11,7,1724,2024/25,1724.0,6.0,11.0,7.0,127.0
+17,Martin Ødegaard,Arsenal,Midfielder,8.0,0.0,3.3,198.8,116,3,9,11,2321,2024/25,2321.0,3.0,9.0,11.0,116.0
+18,Noni Madueke,Arsenal,Midfielder,7.0,0.0,1.5,195.3,120,7,5,6,2028,2024/25,2028.0,7.0,5.0,6.0,120.0
+19,Gabriel Martinelli Silva,Arsenal,Midfielder,7.0,0.0,1.5,206.1,125,8,4,10,2284,2024/25,2284.0,8.0,4.0,10.0,125.0
+20,Leandro Trossard,Arsenal,Midfielder,7.0,0.0,1.1,202.1,152,8,8,11,2546,2024/25,2546.0,8.0,8.0,11.0,152.0
+21,Declan Rice,Arsenal,Midfielder,6.5,0.0,7.5,208.8,127,4,7,11,2823,2024/25,2823.0,4.0,7.0,11.0,127.0
+22,Mikel Merino Zazón,Arsenal,Midfielder,6.0,0.0,0.8,123.3,92,7,2,4,1575,2024/25,1575.0,7.0,2.0,4.0,92.0
+23,Fábio Ferreira Vieira,Arsenal,Midfielder,5.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+24,Christian Nørgaard,Arsenal,Midfielder,5.5,0.0,0.7,147.9,107,5,5,6,2820,2024/25,2820.0,5.0,5.0,6.0,107.0
+25,Ethan Nwaneri,Arsenal,Midfielder,5.5,0.0,0.4,83.0,66,4,2,4,882,2024/25,882.0,4.0,2.0,4.0,66.0
+26,Martín Zubimendi Ibáñez,Arsenal,Midfielder,5.5,0.0,2.0,0.0,0,0,0,0,0,,,,,,
+27,Reiss Nelson,Arsenal,Midfielder,5.0,0.0,0.2,55.1,27,1,1,1,483,2024/25,483.0,1.0,1.0,1.0,27.0
+28,Ismeal Kabia,Arsenal,Midfielder,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+29,Albert Sambi Lokonga,Arsenal,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2023/24,1304.0,1.0,3.0,2.0,47.0
+30,Kai Havertz,Arsenal,Forward,7.5,0.0,1.3,144.8,97,9,3,7,1872,2024/25,1872.0,9.0,3.0,7.0,97.0
+31,Gabriel Fernando de Jesus,Arsenal,Forward,6.5,0.0,0.0,52.6,42,3,2,2,600,2024/25,600.0,3.0,2.0,2.0,42.0
+662,Cristhian Mosquera,Arsenal,Defender,5.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+666,Viktor Gyökeres,Arsenal,Forward,9.0,0.0,25.9,0.0,0,0,0,0,0,2018/19,0.0,0.0,0.0,0.0,0.0
+32,Emiliano Martínez Romero,Aston Villa,Goalkeeper,5.0,0.0,0.5,86.0,111,0,0,8,3195,2024/25,3195.0,0.0,0.0,8.0,111.0
+33,Marco Bizot,Aston Villa,Goalkeeper,4.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+34,Joe Gauci,Aston Villa,Goalkeeper,4.0,0.0,0.9,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+35,Filip Marschall,Aston Villa,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+36,Matty Cash,Aston Villa,Defender,4.5,0.0,1.8,71.3,76,1,1,7,2069,2024/25,2069.0,1.0,1.0,7.0,76.0
+37,Lucas Digne,Aston Villa,Defender,4.5,0.0,1.9,120.7,89,0,5,6,2348,2024/25,2348.0,0.0,5.0,6.0,89.0
+38,Ezri Konsa Ngoyo,Aston Villa,Defender,4.5,0.0,24.1,82.4,103,2,0,8,2936,2024/25,2936.0,2.0,0.0,8.0,103.0
+39,Ian Maatsen,Aston Villa,Defender,4.5,0.0,0.9,74.3,57,1,2,3,1125,2024/25,1125.0,1.0,2.0,3.0,57.0
+40,Tyrone Mings,Aston Villa,Defender,4.5,0.0,0.6,34.6,47,0,1,4,1119,2024/25,1119.0,0.0,1.0,4.0,47.0
+41,Pau Torres,Aston Villa,Defender,4.5,0.0,0.5,54.0,55,0,0,5,2019,2024/25,2019.0,0.0,0.0,5.0,55.0
+42,Andrés García,Aston Villa,Defender,4.0,0.0,0.7,12.0,8,0,0,0,316,2024/25,316.0,0.0,0.0,0.0,8.0
+43,Álex Moreno Lopera,Aston Villa,Defender,4.0,0.0,10.8,36.4,34,0,1,3,952,2024/25,952.0,0.0,1.0,3.0,34.0
+44,Lamare Bogarde,Aston Villa,Defender,4.0,0.0,0.3,13.3,6,0,0,0,473,2024/25,473.0,0.0,0.0,0.0,6.0
+45,Lino da Cruz Sousa,Aston Villa,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+46,Yasin Özcan,Aston Villa,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+47,Morgan Rogers,Aston Villa,Midfielder,7.0,0.0,15.5,214.3,161,8,11,10,3115,2024/25,3115.0,8.0,11.0,10.0,161.0
+48,Youri Tielemans,Aston Villa,Midfielder,6.0,0.0,2.0,209.6,121,3,7,7,3025,2024/25,3025.0,3.0,7.0,7.0,121.0
+49,Leon Bailey,Aston Villa,Midfielder,5.5,0.0,0.5,70.3,47,1,2,2,1132,2024/25,1132.0,1.0,2.0,2.0,47.0
+50,Emiliano Buendía Stati,Aston Villa,Midfielder,5.5,0.0,0.2,5.2,11,0,0,0,89,2024/25,89.0,0.0,0.0,0.0,11.0
+51,Samuel Iling-Junior,Aston Villa,Midfielder,5.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+52,Jacob Ramsey,Aston Villa,Midfielder,5.5,0.0,0.6,78.7,66,1,4,5,1616,2024/25,1616.0,1.0,4.0,5.0,66.0
+53,Donyell Malen,Aston Villa,Midfielder,5.5,0.0,2.8,38.5,34,3,0,0,296,2024/25,296.0,3.0,0.0,0.0,34.0
+54,John McGinn,Aston Villa,Midfielder,5.5,0.0,0.6,103.7,78,1,4,8,2217,2024/25,2217.0,1.0,4.0,8.0,78.0
+55,Ross Barkley,Aston Villa,Midfielder,5.0,0.0,0.2,54.8,44,3,1,1,567,2024/25,567.0,3.0,1.0,1.0,44.0
+56,Enzo Barrenechea,Aston Villa,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+57,Lewis Dobbin,Aston Villa,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+58,Boubacar Kamara,Aston Villa,Midfielder,5.0,0.0,0.2,60.2,57,1,0,6,1720,2024/25,1720.0,1.0,0.0,6.0,57.0
+59,Amadou Onana,Aston Villa,Midfielder,5.0,0.0,1.6,77.0,65,3,0,6,1613,2024/25,1613.0,3.0,0.0,6.0,65.0
+60,Ben Broggio,Aston Villa,Midfielder,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+61,Leander Dendoncker,Aston Villa,Midfielder,4.5,0.0,0.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+62,Jamaldeen Jimoh-Aloba,Aston Villa,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+63,Kadan Young,Aston Villa,Midfielder,4.5,0.0,0.6,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+64,Ollie Watkins,Aston Villa,Forward,9.0,0.0,21.1,223.8,186,16,8,10,2593,2024/25,2593.0,16.0,8.0,10.0,186.0
+65,Zépiqueno Redmond,Aston Villa,Forward,4.5,0.0,0.8,0.0,0,0,0,0,0,,,,,,
+677,Evann Guessand,Aston Villa,Midfielder,6.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+183,Max Weiß,Burnley,Goalkeeper,4.5,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+184,Etienne Green,Burnley,Goalkeeper,4.0,0.0,0.4,0.0,0,0,0,0,0,,,,,,
+185,Václav Hladký,Burnley,Goalkeeper,4.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+186,Connor Roberts,Burnley,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,2023/24,817.0,0.0,1.0,0.0,12.0
+187,Kyle Walker,Burnley,Defender,4.5,0.0,2.1,33.5,13,0,0,0,966,2024/25,966.0,0.0,0.0,0.0,13.0
+188,Hannes Delcroix,Burnley,Defender,4.0,0.0,0.4,0.0,0,0,0,0,0,2023/24,584.0,0.0,0.0,0.0,7.0
+189,Owen Dodgson,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+190,Hjalmar Ekdal,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,436.0,0.0,0.0,1.0,15.0
+191,Maxime Estève,Burnley,Defender,4.0,0.0,16.4,0.0,0,0,0,0,0,2023/24,1310.0,0.0,0.0,0.0,15.0
+192,Quilindschy Hartman,Burnley,Defender,4.0,0.0,0.4,0.0,0,0,0,0,0,,,,,,
+193,Bashir Humphreys,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+194,Jordan Beyer,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,1234.0,0.0,1.0,2.0,30.0
+195,Lucas Pires Silva,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+196,Shurandy Sambo,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+197,Oliver Sonne,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+198,Axel Tuanzebe,Burnley,Defender,4.0,0.0,3.1,40.1,27,0,1,1,1710,2024/25,1710.0,0.0,1.0,1.0,27.0
+199,Joe Worrall,Burnley,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+200,Jaidon Anthony,Burnley,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+201,Manuel Benson Hedilazio,Burnley,Midfielder,5.5,0.0,0.0,0.0,0,0,0,0,0,2023/24,110.0,0.0,0.0,0.0,8.0
+202,Jacob Bruun Larsen,Burnley,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,2023/24,1235.0,6.0,0.0,3.0,82.0
+203,Enock Agyei,Burnley,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+204,Darko Churlinov,Burnley,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+205,Josh Cullen,Burnley,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2023/24,2055.0,2.0,4.0,0.0,65.0
+206,Marcus Edwards,Burnley,Midfielder,5.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+207,Hannibal Mejbri,Burnley,Midfielder,5.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+208,Luca Koleosho,Burnley,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2023/24,972.0,1.0,2.0,3.0,40.0
+209,Josh Laurent,Burnley,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+210,Loum Tchaouna,Burnley,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+211,Aaron Ramsey,Burnley,Midfielder,4.5,0.0,11.7,0.0,0,0,0,0,0,2023/24,522.0,0.0,0.0,0.0,18.0
+212,Oluwaseun Adewumi,Burnley,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+213,Jaydon Banel,Burnley,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+214,Mike Trésor Ndayishimiye,Burnley,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2023/24,410.0,0.0,0.0,0.0,20.0
+215,Zian Flemming,Burnley,Forward,5.5,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+216,Zeki Amdouni,Burnley,Forward,5.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,1953.0,5.0,1.0,5.0,85.0
+217,Lyle Foster,Burnley,Forward,5.0,0.0,0.3,0.0,0,0,0,0,0,2023/24,1898.0,5.0,3.0,2.0,75.0
+218,Ashley Barnes,Burnley,Forward,4.5,0.0,3.4,0.0,0,0,0,0,0,2021/22,793.0,1.0,0.0,1.0,32.0
+219,Michael Obafemi,Burnley,Forward,4.5,0.0,0.6,0.0,0,0,0,0,0,2023/24,19.0,0.0,0.0,0.0,2.0
+470,Martin Dúbravka,Burnley,Goalkeeper,4.0,0.0,27.5,22.0,44,0,0,5,900,2024/25,900.0,0.0,0.0,5.0,44.0
+676,Lesley Ugochukwu,Burnley,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,1652.0,1.0,1.0,1.0,47.0
+680,Armando Broja,Burnley,Forward,5.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,327.0,0.0,0.0,2.0,12.0
+66,Norberto Murara Neto,Bournemouth,Goalkeeper,4.5,0.0,0.8,7.8,7,0,0,0,180,2024/25,180.0,0.0,0.0,0.0,7.0
+67,Đorđe Petrović,Bournemouth,Goalkeeper,4.5,0.0,3.7,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+68,Will Dennis,Bournemouth,Goalkeeper,4.0,0.0,0.8,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+69,Callan McKenna,Bournemouth,Goalkeeper,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+70,Alex Paulsen,Bournemouth,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+71,Illia Zabarnyi,Bournemouth,Defender,5.0,0.0,0.4,92.0,94,0,1,8,3109,2024/25,3109.0,0.0,1.0,8.0,94.0
+72,Marcos Senesi Barón,Bournemouth,Defender,4.5,0.0,0.6,39.6,31,0,0,2,1103,2024/25,1103.0,0.0,0.0,2.0,31.0
+73,Adam Smith,Bournemouth,Defender,4.5,0.0,0.2,35.0,57,0,0,6,1586,2024/25,1586.0,0.0,0.0,6.0,57.0
+74,Adrien Truffert,Bournemouth,Defender,4.5,0.0,1.0,0.0,0,0,0,0,0,,,,,,
+75,Matai Akinmboni,Bournemouth,Defender,4.0,0.0,0.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+76,Owen Bevan,Bournemouth,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2022/23,8.0,0.0,0.0,0.0,1.0
+77,James Hill,Bournemouth,Defender,4.0,0.0,0.8,16.6,17,0,1,1,443,2024/25,443.0,0.0,1.0,1.0,17.0
+78,Julián Araujo Zúñiga,Bournemouth,Defender,4.0,0.0,1.3,9.2,12,0,0,0,492,2024/25,492.0,0.0,0.0,0.0,12.0
+79,Chris Mepham,Bournemouth,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+80,Julio Soler Barreto,Bournemouth,Defender,4.0,0.0,0.3,0.4,3,0,0,0,9,2024/25,9.0,0.0,0.0,0.0,3.0
+81,Justin Kluivert,Bournemouth,Midfielder,7.0,0.0,3.2,212.0,158,12,6,13,2339,2024/25,2339.0,12.0,6.0,13.0,158.0
+82,Antoine Semenyo,Bournemouth,Midfielder,7.0,0.0,5.3,267.8,165,11,7,11,3202,2024/25,3202.0,11.0,7.0,11.0,165.0
+83,Dango Ouattara,Bournemouth,Midfielder,6.0,0.0,0.2,187.2,111,7,4,7,1998,2024/25,1998.0,7.0,4.0,7.0,111.0
+84,Marcus Tavernier,Bournemouth,Midfielder,5.5,0.0,0.4,155.4,87,3,7,4,1932,2024/25,1932.0,3.0,7.0,4.0,87.0
+85,Tyler Adams,Bournemouth,Midfielder,5.0,0.0,0.2,75.9,58,0,3,6,1959,2024/25,1959.0,0.0,3.0,6.0,58.0
+86,David Brooks,Bournemouth,Midfielder,5.0,0.0,0.1,80.4,52,2,1,3,941,2024/25,941.0,2.0,1.0,3.0,52.0
+87,Ryan Christie,Bournemouth,Midfielder,5.0,0.0,0.3,139.6,76,2,3,8,2114,2024/25,2114.0,2.0,3.0,8.0,76.0
+88,Lewis Cook,Bournemouth,Midfielder,5.0,0.0,0.0,144.9,82,1,4,5,2976,2024/25,2976.0,1.0,4.0,5.0,82.0
+89,Philip Billing,Bournemouth,Midfielder,5.0,0.0,0.1,20.4,10,0,0,0,176,2024/25,176.0,0.0,0.0,0.0,10.0
+90,Alex Scott,Bournemouth,Midfielder,5.0,0.0,0.1,43.2,26,0,0,3,745,2024/25,745.0,0.0,0.0,3.0,26.0
+91,Luis Sinisterra Lucumí,Bournemouth,Midfielder,5.0,0.0,0.1,42.3,23,1,1,0,229,2024/25,229.0,1.0,1.0,0.0,23.0
+92,Romain Faivre,Bournemouth,Midfielder,4.5,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+93,Hamed Traorè,Bournemouth,Midfielder,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+94,Dominic Sadi,Bournemouth,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+95,Zain Silcott-Duberry,Bournemouth,Midfielder,4.5,0.0,0.2,0.3,1,0,0,0,1,2024/25,1.0,0.0,0.0,0.0,1.0
+96,Ben Winterburn,Bournemouth,Midfielder,4.5,0.0,0.1,0.4,4,0,0,0,22,2024/25,22.0,0.0,0.0,0.0,4.0
+97,Francisco Evanilson de Lima Barbosa,Bournemouth,Forward,7.0,0.0,2.3,174.8,128,10,5,11,2317,2024/25,2317.0,10.0,5.0,11.0,128.0
+98,Enes Ünal,Bournemouth,Forward,5.5,0.0,0.0,35.9,32,2,1,2,330,2024/25,330.0,2.0,1.0,2.0,32.0
+99,Daniel Adu-Adjei,Bournemouth,Forward,4.5,0.0,0.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+100,Eli Junior Kroupi,Bournemouth,Forward,4.5,0.0,1.1,0.0,0,0,0,0,0,,,,,,
+101,Caoimhín Kelleher,Brentford,Goalkeeper,4.5,0.0,21.0,22.4,45,0,0,4,900,2024/25,900.0,0.0,0.0,4.0,45.0
+102,Ellery Balcombe,Brentford,Goalkeeper,4.0,0.0,0.3,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+103,Matthew Cox,Brentford,Goalkeeper,4.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+104,Julian Eyestone,Brentford,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+105,Hákon Rafn Valdimarsson,Brentford,Goalkeeper,4.0,0.0,1.4,2.1,2,0,0,0,144,2024/25,144.0,0.0,0.0,0.0,2.0
+106,Nathan Collins,Brentford,Defender,5.0,0.0,1.9,149.6,127,2,7,8,3420,2024/25,3420.0,2.0,7.0,8.0,127.0
+107,Keane Lewis-Potter,Brentford,Defender,5.0,0.0,0.5,139.9,94,1,5,8,3092,2024/25,3092.0,1.0,5.0,8.0,94.0
+108,Kristoffer Ajer,Brentford,Defender,4.5,0.0,0.2,48.5,39,0,0,3,1433,2024/25,1433.0,0.0,0.0,3.0,39.0
+109,Rico Henry,Brentford,Defender,4.5,0.0,0.2,1.7,4,0,0,0,94,2024/25,94.0,0.0,0.0,0.0,4.0
+110,Michael Kayode,Brentford,Defender,4.5,0.0,0.2,24.2,27,0,1,2,523,2024/25,523.0,0.0,1.0,2.0,27.0
+111,Ethan Pinnock,Brentford,Defender,4.5,0.0,0.3,83.6,47,2,0,2,1912,2024/25,1912.0,2.0,0.0,2.0,47.0
+112,Mads Roerslev Rasmussen,Brentford,Defender,4.5,0.0,0.1,48.0,36,0,2,2,1100,2024/25,1100.0,0.0,2.0,2.0,36.0
+113,Sepp van den Berg,Brentford,Defender,4.5,0.0,0.4,92.3,62,0,1,5,2584,2024/25,2584.0,0.0,1.0,5.0,62.0
+114,Benjamin Arthur,Brentford,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+115,Benjamin Fredrick,Brentford,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+116,Aaron Hickey,Brentford,Defender,4.0,0.0,0.6,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+117,Kim Ji-soo,Brentford,Defender,4.0,0.0,0.2,0.6,3,0,0,0,28,2024/25,28.0,0.0,0.0,0.0,3.0
+118,Jayden Meghoma,Brentford,Defender,4.0,0.0,0.2,0.1,1,0,0,0,4,2024/25,4.0,0.0,0.0,0.0,1.0
+120,Kevin Schade,Brentford,Midfielder,7.0,0.0,1.1,183.3,149,11,4,10,2281,2024/25,2281.0,11.0,4.0,10.0,149.0
+121,Mikkel Damsgaard,Brentford,Midfielder,6.0,0.0,1.2,205.9,131,2,10,11,2911,2024/25,2911.0,2.0,10.0,11.0,131.0
+122,Antoni Milambo,Brentford,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+123,Fábio Freitas Gouveia Carvalho,Brentford,Midfielder,5.0,0.0,0.3,36.3,35,2,1,0,443,2024/25,443.0,2.0,1.0,0.0,35.0
+124,Jordan Henderson,Brentford,Midfielder,5.0,0.0,0.3,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+125,Vitaly Janelt,Brentford,Midfielder,5.0,0.0,0.1,77.2,73,1,3,6,2251,2024/25,2251.0,1.0,3.0,6.0,73.0
+126,Mathias Jensen,Brentford,Midfielder,5.0,0.0,0.1,43.8,38,0,2,2,846,2024/25,846.0,0.0,2.0,2.0,38.0
+127,Gustavo Nunes Fernandes Gomes,Brentford,Midfielder,5.0,0.0,0.0,1.2,3,0,0,0,11,2024/25,11.0,0.0,0.0,0.0,3.0
+128,Frank Onyeka,Brentford,Midfielder,5.0,0.0,0.1,0.0,2,0,0,0,23,2024/25,23.0,0.0,0.0,0.0,2.0
+129,Yehor Yarmoliuk,Brentford,Midfielder,5.0,0.0,0.1,54.4,43,0,0,3,1435,2024/25,1435.0,0.0,0.0,3.0,43.0
+130,Romelle Donovan,Brentford,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+131,Yunus Emre Konak,Brentford,Midfielder,4.5,0.0,0.2,1.2,10,0,0,0,53,2024/25,53.0,0.0,0.0,0.0,10.0
+132,Paris Maghoma,Brentford,Midfielder,4.5,0.0,0.1,5.4,8,0,0,0,112,2024/25,112.0,0.0,0.0,0.0,8.0
+133,Myles Peart-Harris,Brentford,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+134,Ryan Trevitt,Brentford,Midfielder,4.5,0.0,0.0,0.3,1,0,0,0,3,2024/25,3.0,0.0,0.0,0.0,1.0
+135,Yoane Wissa,Brentford,Forward,7.5,0.0,5.9,242.4,185,18,6,9,2921,2024/25,2921.0,18.0,6.0,9.0,185.0
+136,Igor Thiago Nascimento Rodrigues,Brentford,Forward,6.0,0.0,1.1,5.8,9,0,0,0,167,2024/25,167.0,0.0,0.0,0.0,9.0
+137,Iwan Morgan,Brentford,Forward,4.5,0.0,0.5,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+138,Jason Steele,Brighton,Goalkeeper,4.5,0.0,0.5,4.1,9,0,0,1,180,2024/25,180.0,0.0,0.0,1.0,9.0
+139,Bart Verbruggen,Brighton,Goalkeeper,4.5,0.0,7.7,85.8,103,0,1,7,3240,2024/25,3240.0,0.0,1.0,7.0,103.0
+140,Tom McGill,Brighton,Goalkeeper,4.0,0.0,0.3,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+141,Carl Rushworth,Brighton,Goalkeeper,4.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+142,Kjell Scherpen,Brighton,Goalkeeper,4.0,0.0,0.0,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+143,Olivier Boscagli,Brighton,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+144,Diego Coppola,Brighton,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+145,Maxim De Cuyper,Brighton,Defender,4.5,0.0,7.4,0.0,0,0,0,0,0,,,,,,
+146,Lewis Dunk,Brighton,Defender,4.5,0.0,1.1,66.9,44,0,1,4,2081,2024/25,2081.0,0.0,1.0,4.0,44.0
+147,Pervis Estupiñán Tenorio,Brighton,Defender,4.5,0.0,0.1,120.8,63,1,1,3,2399,2024/25,2399.0,1.0,1.0,3.0,63.0
+148,Ferdi Kadıoğlu,Brighton,Defender,4.5,0.0,0.2,24.0,19,1,0,2,385,2024/25,385.0,1.0,0.0,2.0,19.0
+149,Igor Julio dos Santos de Paulo,Brighton,Defender,4.5,0.0,0.1,24.9,18,0,0,1,959,2024/25,959.0,0.0,0.0,1.0,18.0
+150,Tariq Lamptey,Brighton,Defender,4.5,0.0,0.4,36.8,42,2,2,2,856,2024/25,856.0,2.0,2.0,2.0,42.0
+151,Jan Paul van Hecke,Brighton,Defender,4.5,0.0,1.2,118.3,87,1,1,7,2960,2024/25,2960.0,1.0,1.0,7.0,87.0
+152,Joël Veltman,Brighton,Defender,4.5,0.0,0.3,48.1,59,0,0,6,1694,2024/25,1694.0,0.0,0.0,6.0,59.0
+153,Adam Webster,Brighton,Defender,4.5,0.0,0.0,30.2,39,0,1,4,885,2024/25,885.0,0.0,1.0,4.0,39.0
+154,Eiran Cashin,Brighton,Defender,4.0,0.0,0.1,0.7,1,0,0,0,19,2024/25,19.0,0.0,0.0,0.0,1.0
+155,Jacob Slater,Brighton,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+156,Charlie Tasker,Brighton,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+157,Mitoma Kaoru,Brighton,Midfielder,6.5,0.0,6.6,210.7,145,10,5,6,2597,2024/25,2597.0,10.0,5.0,6.0,145.0
+158,Georginio Rutter,Brighton,Midfielder,6.0,0.0,0.7,103.0,95,5,6,6,1651,2024/25,1651.0,5.0,6.0,6.0,95.0
+159,Solly March,Brighton,Midfielder,6.0,0.0,0.1,10.1,7,0,0,0,161,2024/25,161.0,0.0,0.0,0.0,7.0
+160,Yankuba Minteh,Brighton,Midfielder,6.0,0.0,1.4,159.1,102,6,5,4,1831,2024/25,1831.0,6.0,5.0,4.0,102.0
+161,Julio Enciso Espínola,Brighton,Midfielder,5.5,0.0,0.1,87.7,59,2,3,2,1155,2024/25,1155.0,2.0,3.0,2.0,59.0
+162,Brajan Gruda,Brighton,Midfielder,5.5,0.0,0.1,69.1,45,1,4,1,676,2024/25,676.0,1.0,4.0,1.0,45.0
+163,Jack Hinshelwood,Brighton,Midfielder,5.5,0.0,0.1,97.0,89,5,3,6,1839,2024/25,1839.0,5.0,3.0,6.0,89.0
+164,Matt O'Riley,Brighton,Midfielder,5.5,0.0,0.1,75.3,50,2,3,2,929,2024/25,929.0,2.0,3.0,2.0,50.0
+165,Abdallah Sima,Brighton,Midfielder,5.5,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+166,Yasin Ayari,Brighton,Midfielder,5.0,0.0,0.2,111.7,74,2,1,7,1958,2024/25,1958.0,2.0,1.0,7.0,74.0
+167,Carlos Baleba,Brighton,Midfielder,5.0,0.0,5.1,105.2,87,3,1,8,2660,2024/25,2660.0,3.0,1.0,8.0,87.0
+168,Facundo Buonanotte,Brighton,Midfielder,5.0,0.0,0.3,114.7,75,5,2,2,1508,2024/25,1508.0,5.0,2.0,2.0,75.0
+169,Diego Gómez Amarilla,Brighton,Midfielder,5.0,0.0,0.1,33.6,30,1,1,0,507,2024/25,507.0,1.0,1.0,0.0,30.0
+170,James Milner,Brighton,Midfielder,5.0,0.0,0.1,10.7,6,0,0,1,170,2024/25,170.0,0.0,0.0,1.0,6.0
+171,Jeremy Sarmiento Morante,Brighton,Midfielder,5.0,0.0,0.1,0.1,1,0,0,0,8,2024/25,8.0,0.0,0.0,0.0,1.0
+172,Tom Watson,Brighton,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+173,Mats Wieffer,Brighton,Midfielder,5.0,0.0,0.1,68.5,52,1,5,2,1003,2024/25,1003.0,1.0,5.0,2.0,52.0
+174,Malick Yalcouyé,Brighton,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+175,Joe Knight,Brighton,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+176,Adrian Mazilu,Brighton,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+177,Andrew Moran,Brighton,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+178,Danny Welbeck,Brighton,Forward,6.5,0.0,6.1,155.8,125,10,5,7,2109,2024/25,2109.0,10.0,5.0,7.0,125.0
+179,Evan Ferguson,Brighton,Forward,5.5,0.0,0.1,25.0,28,1,0,1,385,2024/25,385.0,1.0,0.0,1.0,28.0
+180,Stefanos Tzimas,Brighton,Forward,5.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+181,Charalampos Kostoulas,Brighton,Forward,5.0,0.0,0.5,0.0,0,0,0,0,0,,,,,,
+220,Robert Lynch Sánchez,Chelsea,Goalkeeper,5.0,0.0,19.2,77.5,126,0,0,10,2880,2024/25,2880.0,0.0,0.0,10.0,126.0
+221,Filip Jörgensen,Chelsea,Goalkeeper,4.5,0.0,0.2,15.9,18,0,0,1,540,2024/25,540.0,0.0,0.0,1.0,18.0
+222,Mike Penders,Chelsea,Goalkeeper,4.0,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+223,Gabriel Słonina,Chelsea,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+224,Marc Cucurella Saseta,Chelsea,Defender,6.0,0.0,18.8,137.9,133,5,2,9,2988,2024/25,2988.0,5.0,2.0,9.0,133.0
+225,Reece James,Chelsea,Defender,5.5,0.0,4.8,46.7,54,1,2,3,1057,2024/25,1057.0,1.0,2.0,3.0,54.0
+226,Trevoh Chalobah,Chelsea,Defender,5.0,0.0,0.9,84.6,93,3,1,6,1969,2024/25,1969.0,3.0,1.0,6.0,93.0
+227,Levi Samuels Colwill,Chelsea,Defender,5.0,0.0,1.4,109.4,109,2,1,10,3150,2024/25,3150.0,2.0,1.0,10.0,109.0
+228,Malo Gusto,Chelsea,Defender,5.0,0.0,2.0,87.9,60,0,1,4,1853,2024/25,1853.0,0.0,1.0,4.0,60.0
+229,Benoît Badiashile Mukinayi,Chelsea,Defender,4.5,0.0,0.1,7.9,7,0,0,0,332,2024/25,332.0,0.0,0.0,0.0,7.0
+230,Wesley Fofana,Chelsea,Defender,4.5,0.0,0.3,31.9,26,0,0,2,1172,2024/25,1172.0,0.0,0.0,2.0,26.0
+231,Mamadou Sarr,Chelsea,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+232,Tosin Adarabioyo,Chelsea,Defender,4.5,0.0,0.7,49.6,71,1,1,7,1403,2024/25,1403.0,1.0,1.0,7.0,71.0
+233,Josh Acheampong,Chelsea,Defender,4.0,0.0,0.3,2.9,4,0,0,0,168,2024/25,168.0,0.0,0.0,0.0,4.0
+234,Aarón Anselmino,Chelsea,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+235,Cole Palmer,Chelsea,Midfielder,10.5,0.0,57.6,338.0,214,15,10,10,3193,2024/25,3193.0,15.0,10.0,10.0,214.0
+236,Pedro Lomba Neto,Chelsea,Midfielder,7.0,0.0,4.1,180.0,104,4,6,8,2262,2024/25,2262.0,4.0,6.0,8.0,104.0
+237,Enzo Fernández,Chelsea,Midfielder,6.5,0.0,3.7,241.3,135,6,8,10,2943,2024/25,2943.0,6.0,8.0,10.0,135.0
+238,Estêvão Almeida de Oliveira Gonçalves,Chelsea,Midfielder,6.5,0.0,1.8,0.0,0,0,0,0,0,,,,,,
+239,Jamie Bynoe-Gittens,Chelsea,Midfielder,6.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+240,Christopher Nkunku,Chelsea,Midfielder,6.0,0.0,0.2,77.1,60,3,2,2,904,2024/25,904.0,3.0,2.0,2.0,60.0
+241,Moisés Caicedo Corozo,Chelsea,Midfielder,5.5,0.0,6.3,129.2,98,1,4,12,3351,2024/25,3351.0,1.0,4.0,12.0,98.0
+243,Tyrique George,Chelsea,Midfielder,5.0,0.0,0.1,17.1,17,1,1,1,177,2024/25,177.0,1.0,1.0,1.0,17.0
+244,Roméo Lavia,Chelsea,Midfielder,5.0,0.0,0.1,24.4,26,0,1,3,792,2024/25,792.0,0.0,1.0,3.0,26.0
+245,Mykhailo Mudryk,Chelsea,Midfielder,5.0,0.0,0.0,8.5,7,0,0,0,145,2024/25,145.0,0.0,0.0,0.0,7.0
+246,Andrey Nascimento dos Santos,Chelsea,Midfielder,4.5,0.0,0.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+247,Dário Luís Essugo,Chelsea,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+248,Kendry Páez Andrade,Chelsea,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+249,João Pedro Junqueira de Jesus,Chelsea,Forward,7.5,0.0,54.5,166.0,126,10,6,6,1946,2024/25,1946.0,10.0,6.0,6.0,126.0
+250,Liam Delap,Chelsea,Forward,6.5,0.0,4.6,157.5,132,12,2,3,2587,2024/25,2587.0,12.0,2.0,3.0,132.0
+251,Nicolas Jackson,Chelsea,Forward,6.5,0.0,0.1,187.4,121,10,6,11,2220,2024/25,2220.0,10.0,6.0,11.0,121.0
+672,Jorrel Hato,Chelsea,Defender,5.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+253,Dean Henderson,Crystal Palace,Goalkeeper,5.0,0.0,5.6,88.6,135,0,0,11,3420,2024/25,3420.0,0.0,0.0,11.0,135.0
+254,Walter Benítez,Crystal Palace,Goalkeeper,4.0,0.0,0.4,0.0,0,0,0,0,0,,,,,,
+255,Remi Matthews,Crystal Palace,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+256,Daniel Muñoz Mejía,Crystal Palace,Defender,5.5,0.0,9.2,197.6,142,4,6,11,3229,2024/25,3229.0,4.0,6.0,11.0,142.0
+257,Maxence Lacroix,Crystal Palace,Defender,5.0,0.0,1.1,111.4,114,1,2,11,3116,2024/25,3116.0,1.0,2.0,11.0,114.0
+258,Tyrick Mitchell,Crystal Palace,Defender,5.0,0.0,1.1,136.2,123,0,6,12,3090,2024/25,3090.0,0.0,6.0,12.0,123.0
+259,Borna Sosa,Crystal Palace,Defender,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+260,Marc Guéhi,Crystal Palace,Defender,4.5,0.0,13.4,131.0,116,3,2,11,3059,2024/25,3059.0,3.0,2.0,11.0,116.0
+261,Chris Richards,Crystal Palace,Defender,4.5,0.0,1.4,69.6,68,1,1,7,1921,2024/25,1921.0,1.0,1.0,7.0,68.0
+262,Chadi Riad Dnanou,Crystal Palace,Defender,4.0,0.0,0.0,2.0,1,0,0,0,90,2024/25,90.0,0.0,0.0,0.0,1.0
+263,Nathaniel Clyne,Crystal Palace,Defender,4.0,0.0,0.7,12.4,18,0,0,1,477,2024/25,477.0,0.0,0.0,1.0,18.0
+264,Rob Holding,Crystal Palace,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+265,Caleb Kporha,Crystal Palace,Defender,4.0,0.0,0.1,1.3,2,0,0,0,11,2024/25,11.0,0.0,0.0,0.0,2.0
+266,Eberechi Eze,Crystal Palace,Midfielder,7.5,0.0,9.9,222.4,148,8,8,10,2588,2024/25,2588.0,8.0,8.0,10.0,148.0
+267,Ismaïla Sarr,Crystal Palace,Midfielder,6.5,0.0,4.9,215.9,149,8,7,10,2708,2024/25,2708.0,8.0,7.0,10.0,149.0
+268,Cheick Doucouré,Crystal Palace,Midfielder,5.0,0.0,0.0,10.8,19,0,1,1,443,2024/25,443.0,0.0,1.0,1.0,19.0
+269,Romain Esse,Crystal Palace,Midfielder,5.0,0.0,0.2,16.4,22,1,2,0,138,2024/25,138.0,1.0,2.0,0.0,22.0
+270,Will Hughes,Crystal Palace,Midfielder,5.0,0.0,0.1,87.5,67,0,4,10,2100,2024/25,2100.0,0.0,4.0,10.0,67.0
+271,Daichi Kamada,Crystal Palace,Midfielder,5.0,0.0,0.1,68.2,45,0,0,3,1545,2024/25,1545.0,0.0,0.0,3.0,45.0
+272,Jefferson Lerma Solís,Crystal Palace,Midfielder,5.0,0.0,0.1,78.7,58,0,1,6,2270,2024/25,2270.0,0.0,1.0,6.0,58.0
+273,Adam Wharton,Crystal Palace,Midfielder,5.0,0.0,0.6,71.2,42,0,2,4,1314,2024/25,1314.0,0.0,2.0,4.0,42.0
+274,Asher Agbinone,Crystal Palace,Midfielder,4.5,0.0,0.1,1.5,2,0,0,0,4,2024/25,4.0,0.0,0.0,0.0,2.0
+275,Naouirou Ahamada,Crystal Palace,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+276,Justin Devenny,Crystal Palace,Midfielder,4.5,0.0,1.9,33.2,34,1,1,0,494,2024/25,494.0,1.0,1.0,0.0,34.0
+277,Malcolm Ebiowei,Crystal Palace,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+278,Jesurun Rak-Sakyi,Crystal Palace,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+279,Matheus França de Oliveira,Crystal Palace,Midfielder,4.5,0.0,0.1,11.5,9,1,0,0,52,2024/25,52.0,1.0,0.0,0.0,9.0
+280,David Ozoh,Crystal Palace,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+281,Kaden Rodney,Crystal Palace,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+282,Franco Umeh-Chibueze,Crystal Palace,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+283,Jean-Philippe Mateta,Crystal Palace,Forward,7.5,0.0,8.0,187.3,150,14,2,9,2642,2024/25,2642.0,14.0,2.0,9.0,150.0
+284,Eddie Nketiah,Crystal Palace,Forward,5.5,0.0,1.1,82.5,53,3,2,2,1018,2024/25,1018.0,3.0,2.0,2.0,53.0
+285,Odsonne Édouard,Crystal Palace,Forward,5.0,0.0,1.0,8.0,7,0,0,0,141,2024/25,141.0,0.0,0.0,0.0,7.0
+286,Zach Marsh,Crystal Palace,Forward,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+242,Kiernan Dewsbury-Hall,Everton,Midfielder,5.0,0.0,2.8,12.6,18,0,1,0,257,2024/25,257.0,0.0,1.0,0.0,18.0
+287,Jordan Pickford,Everton,Goalkeeper,5.5,0.0,12.1,107.0,158,0,1,12,3420,2024/25,3420.0,0.0,1.0,12.0,158.0
+288,Mark Travers,Everton,Goalkeeper,4.5,0.0,0.2,14.6,19,0,0,1,450,2024/25,450.0,0.0,0.0,1.0,19.0
+289,Harry Tyrer,Everton,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2021/22,0.0,0.0,0.0,0.0,0.0
+290,Jarrad Branthwaite,Everton,Defender,5.5,0.0,1.9,81.3,88,0,1,9,2509,2024/25,2509.0,0.0,1.0,9.0,88.0
+291,James Tarkowski,Everton,Defender,5.5,0.0,6.1,126.9,105,1,1,10,2922,2024/25,2922.0,1.0,1.0,10.0,105.0
+292,Vitalii Mykolenko,Everton,Defender,5.0,0.0,2.7,115.2,121,1,3,11,3082,2024/25,3082.0,1.0,3.0,11.0,121.0
+293,Jake O'Brien,Everton,Defender,5.0,0.0,0.5,56.0,65,2,0,5,1568,2024/25,1568.0,2.0,0.0,5.0,65.0
+294,Séamus Coleman,Everton,Defender,4.5,0.0,0.2,7.1,5,0,0,0,214,2024/25,214.0,0.0,0.0,0.0,5.0
+295,Michael Keane,Everton,Defender,4.5,0.0,0.3,45.4,48,3,0,3,1046,2024/25,1046.0,3.0,0.0,3.0,48.0
+296,Nathan Patterson,Everton,Defender,4.5,0.0,0.1,15.5,14,0,1,0,342,2024/25,342.0,0.0,1.0,0.0,14.0
+297,Roman Dixon,Everton,Defender,4.0,0.0,0.3,1.6,0,0,0,0,90,2024/25,90.0,0.0,0.0,0.0,0.0
+298,Reece Welch,Everton,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+299,Iliman Ndiaye,Everton,Midfielder,6.5,0.0,12.9,142.0,114,9,0,15,2426,2024/25,2426.0,9.0,0.0,15.0,114.0
+300,Dwight McNeil,Everton,Midfielder,6.0,0.0,0.6,123.3,93,4,8,5,1366,2024/25,1366.0,4.0,8.0,5.0,93.0
+301,Carlos Alcaraz Durán,Everton,Midfielder,5.5,0.0,0.2,65.4,44,2,3,1,766,2024/25,766.0,2.0,3.0,1.0,44.0
+302,Idrissa Gana Gueye,Everton,Midfielder,5.5,0.0,0.1,96.6,89,0,3,12,3063,2024/25,3063.0,0.0,3.0,12.0,89.0
+303,James Garner,Everton,Midfielder,5.0,0.0,0.1,60.4,42,0,1,5,1590,2024/25,1590.0,0.0,1.0,5.0,42.0
+304,Tim Iroegbunam,Everton,Midfielder,5.0,0.0,0.0,19.6,22,0,1,0,562,2024/25,562.0,0.0,1.0,0.0,22.0
+305,Harrison Armstrong,Everton,Midfielder,4.5,0.0,0.3,2.2,2,0,0,0,47,2024/25,47.0,0.0,0.0,0.0,2.0
+306,Callum Bates,Everton,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+307,Coby Ebere,Everton,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+308,Isaac Heath,Everton,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+309,Jenson Metcalfe,Everton,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+310,Thierno Barry,Everton,Forward,6.0,0.0,0.9,0.0,0,0,0,0,0,,,,,,
+311,Norberto Bercique Gomes Betuncal,Everton,Forward,5.5,0.0,11.3,119.5,87,8,0,4,1521,2024/25,1521.0,8.0,0.0,4.0,87.0
+312,Youssef Ramalho Chermiti,Everton,Forward,5.0,0.0,0.2,3.0,3,0,0,0,42,2024/25,42.0,0.0,0.0,0.0,3.0
+313,Martin Sherif,Everton,Forward,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+667,Adam Aznou,Everton,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+314,Bernd Leno,Fulham,Goalkeeper,5.0,0.0,1.7,98.6,115,0,2,5,3420,2024/25,3420.0,0.0,2.0,5.0,115.0
+315,Steven Benda,Fulham,Goalkeeper,4.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+316,Antonee Robinson,Fulham,Defender,5.0,0.0,3.6,185.5,106,0,10,5,3166,2024/25,3166.0,0.0,10.0,5.0,106.0
+317,Joachim Andersen,Fulham,Defender,4.5,0.0,1.6,95.0,51,0,0,4,2673,2024/25,2673.0,0.0,0.0,4.0,51.0
+318,Calvin Bassey,Fulham,Defender,4.5,0.0,0.5,84.1,75,1,0,5,3074,2024/25,3074.0,1.0,0.0,5.0,75.0
+319,Timothy Castagne,Fulham,Defender,4.5,0.0,0.2,64.9,46,0,1,3,1642,2024/25,1642.0,0.0,1.0,3.0,46.0
+320,Issa Diop,Fulham,Defender,4.5,0.0,0.1,38.3,31,0,0,1,1334,2024/25,1334.0,0.0,0.0,1.0,31.0
+321,Jorge Cuenca Barreno,Fulham,Defender,4.5,0.0,0.1,8.6,9,0,0,0,349,2024/25,349.0,0.0,0.0,0.0,9.0
+322,Kenny Tete,Fulham,Defender,4.5,0.0,0.2,73.1,49,0,2,3,1773,2024/25,1773.0,0.0,2.0,3.0,49.0
+323,Samuel Amissah,Fulham,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+324,Alex Iwobi,Fulham,Midfielder,6.5,0.0,1.6,243.0,156,9,6,6,2981,2024/25,2981.0,9.0,6.0,6.0,156.0
+325,Emile Smith Rowe,Fulham,Midfielder,6.0,0.0,1.1,124.4,114,6,3,7,2036,2024/25,2036.0,6.0,3.0,7.0,114.0
+326,Adama Traoré Diarra,Fulham,Midfielder,5.5,0.0,0.3,144.6,95,2,8,3,1756,2024/25,1756.0,2.0,8.0,3.0,95.0
+327,Andreas Hoelgebaum Pereira,Fulham,Midfielder,5.5,0.0,0.4,149.0,81,2,6,5,2004,2024/25,2004.0,2.0,6.0,5.0,81.0
+328,Ryan Sessegnon,Fulham,Midfielder,5.5,0.0,0.1,67.1,57,4,2,1,574,2024/25,574.0,4.0,2.0,1.0,57.0
+329,Harry Wilson,Fulham,Midfielder,5.5,0.0,1.2,107.8,78,6,2,2,1148,2024/25,1148.0,6.0,2.0,2.0,78.0
+330,Sander Berge,Fulham,Midfielder,5.0,0.0,0.1,65.1,53,0,0,4,2221,2024/25,2221.0,0.0,0.0,4.0,53.0
+331,Tom Cairney,Fulham,Midfielder,5.0,0.0,0.1,47.2,33,2,0,1,610,2024/25,610.0,2.0,0.0,1.0,33.0
+332,Saša Lukić,Fulham,Midfielder,5.0,0.0,0.1,91.0,56,0,2,4,2348,2024/25,2348.0,0.0,2.0,4.0,56.0
+333,Martial Godo,Fulham,Midfielder,4.5,0.0,0.1,3.0,2,0,0,0,21,2024/25,21.0,0.0,0.0,0.0,2.0
+334,Luke Harris,Fulham,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+335,Josh King,Fulham,Midfielder,4.5,0.0,0.6,11.2,10,0,0,1,126,2024/25,126.0,0.0,0.0,1.0,10.0
+336,Harrison Reed,Fulham,Midfielder,4.5,0.0,0.3,7.1,10,0,0,0,100,2024/25,100.0,0.0,0.0,0.0,10.0
+337,Raúl Jiménez Rodríguez,Fulham,Forward,6.5,0.0,2.3,199.7,147,12,3,7,2486,2024/25,2486.0,12.0,3.0,7.0,147.0
+338,Rodrigo Muniz Carvalho,Fulham,Forward,5.5,0.0,2.3,95.4,86,8,1,2,943,2024/25,943.0,8.0,1.0,2.0,86.0
+664,Benjamin Lecomte,Fulham,Goalkeeper,4.0,0.0,1.0,0.0,0,0,0,0,0,,,,,,
+339,Illan Meslier,Leeds,Goalkeeper,4.5,0.0,1.0,0.0,0,0,0,0,0,2022/23,3060.0,0.0,0.0,5.0,90.0
+340,Alex Cairns,Leeds,Goalkeeper,4.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+341,Karl Darlow,Leeds,Goalkeeper,4.0,0.0,4.7,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+342,Jayden Bogle,Leeds,Defender,4.5,0.0,0.4,0.0,0,0,0,0,0,2023/24,2787.0,3.0,3.0,3.0,63.0
+343,Pascal Struijk,Leeds,Defender,4.5,0.0,0.4,0.0,0,0,0,0,0,2022/23,2198.0,2.0,2.0,4.0,66.0
+344,Jaka Bijol,Leeds,Defender,4.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+345,Sebastiaan Bornauw,Leeds,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+346,Sam Byram,Leeds,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,2021/22,1023.0,0.0,0.0,2.0,20.0
+347,Gabriel Gudmundsson,Leeds,Defender,4.0,0.0,2.5,0.0,0,0,0,0,0,,,,,,
+348,Joe Rodon,Leeds,Defender,4.0,0.0,1.7,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+349,Isaac Schmidt,Leeds,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+350,Brenden Aaronson,Leeds,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,2022/23,2365.0,1.0,4.0,5.0,83.0
+351,Wilfried Gnonto,Leeds,Midfielder,5.5,0.0,0.5,0.0,0,0,0,0,0,2022/23,1346.0,2.0,4.0,4.0,55.0
+352,Jack Harrison,Leeds,Midfielder,5.5,0.0,0.2,108.6,81,1,3,7,2068,2024/25,2068.0,1.0,3.0,7.0,81.0
+353,Daniel James,Leeds,Midfielder,5.5,0.0,0.7,0.0,0,0,0,0,0,2022/23,802.0,2.0,1.0,1.0,45.0
+354,Ethan Ampadu,Leeds,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+355,Sam Greenwood,Leeds,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2022/23,410.0,1.0,2.0,0.0,30.0
+356,Ilia Gruev,Leeds,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+357,Largie Ramazani,Leeds,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+358,Tanaka Ao,Leeds,Midfielder,5.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+359,Charlie Crew,Leeds,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+360,Joe Gelhardt,Leeds,Midfielder,4.5,0.0,0.2,0.0,0,0,0,0,0,2022/23,201.0,0.0,2.0,0.0,20.0
+361,Darko Gyabi,Leeds,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2022/23,7.0,0.0,0.0,0.0,1.0
+362,Joël Piroe,Leeds,Forward,5.5,0.0,2.7,0.0,0,0,0,0,0,,,,,,
+363,Patrick Bamford,Leeds,Forward,5.0,0.0,2.6,0.0,0,0,0,0,0,2022/23,1510.0,4.0,5.0,1.0,70.0
+364,Mateo Joseph Fernández-Regatillo,Leeds,Forward,5.0,0.0,0.1,0.0,0,0,0,0,0,2022/23,24.0,0.0,0.0,0.0,3.0
+365,Lukas Nmecha,Leeds,Forward,5.0,0.0,0.5,0.0,0,0,0,0,0,2017/18,14.0,0.0,0.0,0.0,2.0
+493,Sean Longstaff,Leeds,Midfielder,5.0,0.0,0.3,27.3,34,0,1,2,783,2024/25,783.0,0.0,1.0,2.0,34.0
+660,Anton Stach,Leeds,Midfielder,5.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+665,Lucas Estella Perri,Leeds,Goalkeeper,4.5,0.0,0.3,0.0,0,0,0,0,0,2018/19,0.0,0.0,0.0,0.0,0.0
+366,Alisson Becker,Liverpool,Goalkeeper,5.5,0.0,11.0,64.0,112,0,0,10,2508,2024/25,2508.0,0.0,0.0,10.0,112.0
+367,Giorgi Mamardashvili,Liverpool,Goalkeeper,4.5,0.0,0.6,0.0,0,0,0,0,0,,,,,,
+368,Ármin Pécsi,Liverpool,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+369,Freddie Woodman,Liverpool,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2021/22,360.0,0.0,0.0,0.0,9.0
+370,Jeremie Frimpong,Liverpool,Defender,6.0,0.0,29.4,0.0,0,0,0,0,0,,,,,,
+371,Milos Kerkez,Liverpool,Defender,6.0,0.0,8.5,157.3,134,2,6,9,3336,2024/25,3336.0,2.0,6.0,9.0,134.0
+372,Andrew Robertson,Liverpool,Defender,6.0,0.0,1.8,124.4,91,0,1,10,2479,2024/25,2479.0,0.0,1.0,10.0,91.0
+373,Virgil van Dijk,Liverpool,Defender,6.0,0.0,24.0,143.7,143,3,1,14,3330,2024/25,3330.0,3.0,1.0,14.0,143.0
+374,Ibrahima Konaté,Liverpool,Defender,5.5,0.0,2.9,87.6,106,1,2,11,2561,2024/25,2561.0,1.0,2.0,11.0,106.0
+375,Conor Bradley,Liverpool,Defender,5.0,0.0,0.4,42.8,41,0,2,3,744,2024/25,744.0,0.0,2.0,3.0,41.0
+376,Joe Gomez,Liverpool,Defender,5.0,0.0,0.1,22.8,14,0,0,1,517,2024/25,517.0,0.0,0.0,1.0,14.0
+377,Konstantinos Tsimikas,Liverpool,Defender,5.0,0.0,0.1,52.5,43,0,1,4,829,2024/25,829.0,0.0,1.0,4.0,43.0
+378,Amara Nallo,Liverpool,Defender,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+379,Rhys Williams,Liverpool,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+380,Calvin Ramsay,Liverpool,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2022/23,0.0,0.0,0.0,0.0,0.0
+381,Mohamed Salah,Liverpool,Midfielder,14.5,0.0,53.7,476.0,344,29,18,15,3374,2024/25,3374.0,29.0,18.0,15.0,344.0
+382,Florian Wirtz,Liverpool,Midfielder,8.5,0.0,34.4,0.0,0,0,0,0,0,,,,,,
+383,Luis Díaz Marulanda,Liverpool,Midfielder,8.0,0.0,0.4,246.4,183,13,7,15,2393,2024/25,2393.0,13.0,7.0,15.0,183.0
+384,Cody Gakpo,Liverpool,Midfielder,7.5,0.0,6.1,180.3,127,10,5,5,1921,2024/25,1921.0,10.0,5.0,5.0,127.0
+385,Federico Chiesa,Liverpool,Midfielder,6.5,0.0,0.1,6.7,7,0,0,0,103,2024/25,103.0,0.0,0.0,0.0,7.0
+386,Alexis Mac Allister,Liverpool,Midfielder,6.5,0.0,1.5,174.1,122,5,6,14,2597,2024/25,2597.0,5.0,6.0,14.0,122.0
+387,Dominik Szoboszlai,Liverpool,Midfielder,6.5,0.0,2.0,198.1,143,6,10,12,2485,2024/25,2485.0,6.0,10.0,12.0,143.0
+388,Curtis Jones,Liverpool,Midfielder,5.5,0.0,0.1,113.6,87,3,5,6,1702,2024/25,1702.0,3.0,5.0,6.0,87.0
+389,Harvey Elliott,Liverpool,Midfielder,5.5,0.0,0.2,40.4,33,1,2,0,359,2024/25,359.0,1.0,2.0,0.0,33.0
+390,Ryan Gravenberch,Liverpool,Midfielder,5.5,0.0,0.1,114.7,92,0,4,14,3160,2024/25,3160.0,0.0,4.0,14.0,92.0
+391,Ben Doak,Liverpool,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+392,Endo Wataru,Liverpool,Midfielder,5.0,0.0,0.1,10.0,21,0,0,0,259,2024/25,259.0,0.0,0.0,0.0,21.0
+393,Stefan Bajčetić Maquieira,Liverpool,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+394,James McConnell,Liverpool,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+395,Tyler Morton,Liverpool,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+396,Trey Nyoni,Liverpool,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+397,Darwin Núñez Ribeiro,Liverpool,Forward,6.5,0.0,0.7,81.2,66,5,3,2,1113,2024/25,1113.0,5.0,3.0,2.0,66.0
+398,Jayden Danns,Liverpool,Forward,4.5,0.0,0.2,0.0,1,0,0,0,10,2024/25,10.0,0.0,0.0,0.0,1.0
+661,Hugo Ekitiké,Liverpool,Forward,8.5,0.0,11.5,0.0,0,0,0,0,0,,,,,,
+182,James Trafford,Man City,Goalkeeper,5.0,0.0,2.6,0.0,0,0,0,0,0,2023/24,2520.0,0.0,0.0,2.0,70.0
+399,Ederson Santana de Moraes,Man City,Goalkeeper,5.5,0.0,3.7,60.9,111,0,4,10,2320,2024/25,2320.0,0.0,4.0,10.0,111.0
+400,Stefan Ortega Moreno,Man City,Goalkeeper,5.0,0.0,0.4,29.4,35,0,0,3,1099,2024/25,1099.0,0.0,0.0,3.0,35.0
+401,Marcus Bettinelli,Man City,Goalkeeper,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+402,Rayan Aït-Nouri,Man City,Defender,6.0,0.0,21.9,191.0,125,4,7,7,3112,2024/25,3112.0,4.0,7.0,7.0,125.0
+403,Joško Gvardiol,Man City,Defender,6.0,0.0,17.0,185.0,153,5,0,13,3278,2024/25,3278.0,5.0,0.0,13.0,153.0
+404,Manuel Akanji,Man City,Defender,5.5,0.0,0.7,68.9,61,0,0,6,2012,2024/25,2012.0,0.0,0.0,6.0,61.0
+405,Nathan Aké,Man City,Defender,5.5,0.0,0.6,15.9,25,0,0,3,677,2024/25,677.0,0.0,0.0,3.0,25.0
+406,Abdukodir Khusanov,Man City,Defender,5.5,0.0,0.4,14.1,14,0,0,2,503,2024/25,503.0,0.0,0.0,2.0,14.0
+407,Matheus Nunes,Man City,Defender,5.5,0.0,0.5,99.9,81,1,7,9,1670,2024/25,1670.0,1.0,7.0,9.0,81.0
+408,Rúben dos Santos Gato Alves Dias,Man City,Defender,5.5,0.0,2.6,80.2,90,0,0,11,2269,2024/25,2269.0,0.0,0.0,11.0,90.0
+409,John Stones,Man City,Defender,5.5,0.0,0.5,27.4,29,2,0,1,544,2024/25,544.0,2.0,0.0,1.0,29.0
+410,Rico Lewis,Man City,Defender,5.0,0.0,0.7,65.0,66,1,2,5,1888,2024/25,1888.0,1.0,2.0,5.0,66.0
+411,Nico O'Reilly,Man City,Defender,5.0,0.0,0.2,32.2,31,2,0,3,525,2024/25,525.0,2.0,0.0,3.0,31.0
+412,Vitor de Oliveira Nunes dos Reis,Man City,Defender,5.0,0.0,0.1,0.3,1,0,0,0,1,2024/25,1.0,0.0,0.0,0.0,1.0
+413,Omar Marmoush,Man City,Midfielder,8.5,0.0,13.0,97.3,73,7,1,8,1174,2024/25,1174.0,7.0,1.0,8.0,73.0
+414,Phil Foden,Man City,Midfielder,8.0,0.0,2.1,164.2,105,7,3,6,1771,2024/25,1771.0,7.0,3.0,6.0,105.0
+415,Sávio Moreira de Oliveira,Man City,Midfielder,7.0,0.0,1.9,177.3,106,1,11,8,1760,2024/25,1760.0,1.0,11.0,8.0,106.0
+416,Bernardo Mota Veiga de Carvalho e Silva,Man City,Midfielder,6.5,0.0,0.7,193.6,110,4,4,10,2667,2024/25,2667.0,4.0,4.0,10.0,110.0
+417,Rayan Cherki,Man City,Midfielder,6.5,0.0,7.8,0.0,0,0,0,0,0,,,,,,
+418,Jérémy Doku,Man City,Midfielder,6.5,0.0,1.1,150.0,88,3,6,8,1506,2024/25,1506.0,3.0,6.0,8.0,88.0
+419,Jack Grealish,Man City,Midfielder,6.5,0.0,1.4,71.3,38,1,1,2,710,2024/25,710.0,1.0,1.0,2.0,38.0
+420,İlkay Gündoğan,Man City,Midfielder,6.5,0.0,0.2,144.2,97,1,7,10,2218,2024/25,2218.0,1.0,7.0,10.0,97.0
+421,Rodrigo 'Rodri' Hernandez Cascante,Man City,Midfielder,6.5,0.0,1.0,3.0,3,0,0,0,72,2024/25,72.0,0.0,0.0,0.0,3.0
+422,Mateo Kovačić,Man City,Midfielder,6.0,0.0,0.0,139.1,109,6,3,10,2194,2024/25,2194.0,6.0,3.0,10.0,109.0
+423,Nico González Iglesias,Man City,Midfielder,6.0,0.0,0.1,27.5,31,1,1,6,760,2024/25,760.0,1.0,1.0,6.0,31.0
+424,Oscar Bobb,Man City,Midfielder,5.5,0.0,0.1,1.6,3,0,0,0,14,2024/25,14.0,0.0,0.0,0.0,3.0
+425,Claudio Echeverri,Man City,Midfielder,5.5,0.0,0.0,0.3,1,0,0,0,5,2024/25,5.0,0.0,0.0,0.0,1.0
+426,James McAtee,Man City,Midfielder,5.5,0.0,0.1,30.7,31,3,0,0,340,2024/25,340.0,3.0,0.0,0.0,31.0
+427,Tijjani Reijnders,Man City,Midfielder,5.5,0.0,11.1,0.0,0,0,0,0,0,,,,,,
+428,Sverre Nypan,Man City,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+429,Kalvin Phillips,Man City,Midfielder,5.0,0.0,0.1,33.8,27,0,0,1,1231,2024/25,1231.0,0.0,0.0,1.0,27.0
+430,Erling Haaland,Man City,Forward,14.0,0.0,22.4,281.8,181,22,3,10,2736,2024/25,2736.0,22.0,3.0,10.0,181.0
+119,Bryan Mbeumo,Man Utd,Midfielder,8.0,0.0,16.1,340.8,236,20,9,9,3415,2024/25,3415.0,20.0,9.0,9.0,236.0
+431,Altay Bayındır,Man Utd,Goalkeeper,5.0,0.0,0.5,7.9,8,0,0,1,360,2024/25,360.0,0.0,0.0,1.0,8.0
+432,André Onana,Man Utd,Goalkeeper,5.0,0.0,0.1,74.7,120,0,0,9,3060,2024/25,3060.0,0.0,0.0,9.0,120.0
+433,Elyh Harrison,Man Utd,Goalkeeper,4.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+434,Tom Heaton,Man Utd,Goalkeeper,4.0,0.0,0.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+435,Dermot Mee,Man Utd,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+436,Matthijs de Ligt,Man Utd,Defender,5.0,0.0,1.2,91.5,68,2,0,4,2119,2024/25,2119.0,2.0,0.0,4.0,68.0
+437,Lisandro Martínez,Man Utd,Defender,5.0,0.0,0.4,73.8,68,2,1,6,1751,2024/25,1751.0,2.0,1.0,6.0,68.0
+438,Noussair Mazraoui,Man Utd,Defender,5.0,0.0,0.8,107.5,88,0,1,7,2836,2024/25,2836.0,0.0,1.0,7.0,88.0
+439,Diego León Blanco,Man Utd,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+440,Diogo Dalot Teixeira,Man Utd,Defender,4.5,0.0,2.5,118.6,95,0,4,8,2812,2024/25,2812.0,0.0,4.0,8.0,95.0
+441,Patrick Dorgu,Man Utd,Defender,4.5,0.0,6.4,39.4,18,0,0,2,840,2024/25,840.0,0.0,0.0,2.0,18.0
+442,Harry Maguire,Man Utd,Defender,4.5,0.0,0.7,76.1,48,1,0,3,1751,2024/25,1751.0,1.0,0.0,3.0,48.0
+443,Luke Shaw,Man Utd,Defender,4.5,0.0,0.2,12.7,5,0,0,0,346,2024/25,346.0,0.0,0.0,0.0,5.0
+444,Leny Yoro,Man Utd,Defender,4.5,0.0,1.3,31.8,22,0,0,1,1160,2024/25,1160.0,0.0,0.0,1.0,22.0
+445,Harry Amass,Man Utd,Defender,4.0,0.0,0.2,8.2,4,0,0,0,345,2024/25,345.0,0.0,0.0,0.0,4.0
+446,Tyler Fredricson,Man Utd,Defender,4.0,0.0,0.2,4.4,2,0,0,0,166,2024/25,166.0,0.0,0.0,0.0,2.0
+447,Ayden Heaven,Man Utd,Defender,4.0,0.0,1.9,6.4,10,0,0,1,169,2024/25,169.0,0.0,0.0,1.0,10.0
+448,Tyrell Malacia,Man Utd,Defender,4.0,0.0,0.4,1.7,2,0,0,0,99,2024/25,99.0,0.0,0.0,0.0,2.0
+449,Bruno Borges Fernandes,Man Utd,Midfielder,9.0,0.0,17.9,300.8,174,8,12,10,3017,2024/25,3017.0,8.0,12.0,10.0,174.0
+450,Matheus Santos Carneiro da Cunha,Man Utd,Midfielder,8.0,0.0,9.4,272.2,178,15,7,7,2596,2024/25,2596.0,15.0,7.0,7.0,178.0
+451,Marcus Rashford,Man Utd,Midfielder,7.0,0.0,0.2,122.1,95,6,4,7,1414,2024/25,1414.0,6.0,4.0,7.0,95.0
+452,Amad Diallo,Man Utd,Midfielder,6.5,0.0,3.4,193.8,129,8,8,7,1898,2024/25,1898.0,8.0,8.0,7.0,129.0
+453,Alejandro Garnacho Ferreyra,Man Utd,Midfielder,6.5,0.0,0.2,188.3,106,6,4,5,2188,2024/25,2188.0,6.0,4.0,5.0,106.0
+454,Antony dos Santos,Man Utd,Midfielder,6.0,0.0,0.1,15.8,8,0,0,0,135,2024/25,135.0,0.0,0.0,0.0,8.0
+455,Mason Mount,Man Utd,Midfielder,6.0,0.0,0.2,45.6,25,1,0,3,613,2024/25,613.0,1.0,0.0,3.0,25.0
+456,Jadon Sancho,Man Utd,Midfielder,6.0,0.0,0.1,127.5,86,3,5,7,1754,2024/25,1754.0,3.0,5.0,7.0,86.0
+457,Carlos Henrique Casimiro,Man Utd,Midfielder,5.5,0.0,0.2,104.8,48,1,0,6,1489,2024/25,1489.0,1.0,0.0,6.0,48.0
+458,Kobbie Mainoo,Man Utd,Midfielder,5.0,0.0,0.9,58.8,42,0,0,5,1646,2024/25,1646.0,0.0,0.0,5.0,42.0
+459,Manuel Ugarte Ribeiro,Man Utd,Midfielder,5.0,0.0,0.2,62.1,49,1,2,4,1777,2024/25,1777.0,1.0,2.0,4.0,49.0
+460,Toby Collyer,Man Utd,Midfielder,4.5,0.0,0.2,7.9,6,0,0,0,174,2024/25,174.0,0.0,0.0,0.0,6.0
+461,Jayce Fitzgerald,Man Utd,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+462,Jack Fletcher,Man Utd,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+463,Sékou Koné,Man Utd,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+464,Jack Moorhouse,Man Utd,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+465,Rasmus Højlund,Man Utd,Forward,6.5,0.0,0.8,86.3,78,4,1,6,1998,2024/25,1998.0,4.0,1.0,6.0,78.0
+466,Joshua Zirkzee,Man Utd,Forward,6.0,0.0,0.7,78.0,64,3,2,3,1385,2024/25,1385.0,3.0,2.0,3.0,64.0
+467,Chido Obi,Man Utd,Forward,4.5,0.0,3.2,5.4,7,0,0,0,160,2024/25,160.0,0.0,0.0,0.0,7.0
+468,Ethan Wheatley,Man Utd,Forward,4.5,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+681,Benjamin Sesko,Man Utd,Forward,7.5,0.0,4.0,0.0,0,0,0,0,0,,,,,,
+469,Nick Pope,Newcastle,Goalkeeper,5.0,0.0,3.6,67.4,102,0,0,8,2520,2024/25,2520.0,0.0,0.0,8.0,102.0
+471,Mark Gillespie,Newcastle,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+472,Odysseas Vlachodimos,Newcastle,Goalkeeper,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+473,Lewis Hall,Newcastle,Defender,5.5,0.0,2.5,125.3,102,0,7,8,2188,2024/25,2188.0,0.0,7.0,8.0,102.0
+474,Fabian Schär,Newcastle,Defender,5.5,0.0,2.4,119.6,118,4,2,11,2935,2024/25,2935.0,4.0,2.0,11.0,118.0
+475,Sven Botman,Newcastle,Defender,5.0,0.0,0.5,23.6,18,0,0,2,412,2024/25,412.0,0.0,0.0,2.0,18.0
+476,Dan Burn,Newcastle,Defender,5.0,0.0,3.3,115.8,115,1,1,13,3330,2024/25,3330.0,1.0,1.0,13.0,115.0
+477,Tino Livramento,Newcastle,Defender,5.0,0.0,4.0,110.1,105,0,1,10,2835,2024/25,2835.0,0.0,1.0,10.0,105.0
+478,Kieran Trippier,Newcastle,Defender,5.0,0.0,1.7,76.1,72,0,3,6,1299,2024/25,1299.0,0.0,3.0,6.0,72.0
+479,Emil Krafth,Newcastle,Defender,4.5,0.0,0.1,9.3,17,0,0,1,334,2024/25,334.0,0.0,0.0,1.0,17.0
+480,Jamaal Lascelles,Newcastle,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+481,Alex Murphy,Newcastle,Defender,4.0,0.0,0.8,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+482,Harrison Ashby,Newcastle,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+483,Miodrag Pivaš,Newcastle,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+484,Matt Targett,Newcastle,Defender,4.0,0.0,0.6,1.0,2,0,0,0,20,2024/25,20.0,0.0,0.0,0.0,2.0
+485,Anthony Gordon,Newcastle,Midfielder,7.5,0.0,2.2,196.8,124,6,6,10,2428,2024/25,2428.0,6.0,6.0,10.0,124.0
+486,Anthony Elanga,Newcastle,Midfielder,7.0,0.0,9.3,199.8,153,6,11,12,2496,2024/25,2496.0,6.0,11.0,12.0,153.0
+487,Harvey Barnes,Newcastle,Midfielder,6.5,0.0,0.6,163.1,130,9,5,6,1746,2024/25,1746.0,9.0,5.0,6.0,130.0
+488,Bruno Guimarães Rodriguez Moura,Newcastle,Midfielder,6.5,0.0,1.6,197.5,135,5,6,13,3273,2024/25,3273.0,5.0,6.0,13.0,135.0
+489,Jacob Murphy,Newcastle,Midfielder,6.5,0.0,2.9,185.6,159,8,13,11,2356,2024/25,2356.0,8.0,13.0,11.0,159.0
+490,Joelinton Cássio Apolinário de Lira,Newcastle,Midfielder,6.0,0.0,0.5,132.7,99,4,4,10,2394,2024/25,2394.0,4.0,4.0,10.0,99.0
+491,Sandro Tonali,Newcastle,Midfielder,5.5,0.0,2.2,133.5,106,4,2,11,2625,2024/25,2625.0,4.0,2.0,11.0,106.0
+492,Antoñito Cordero Campillo,Newcastle,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+494,Joe Willock,Newcastle,Midfielder,5.0,0.0,0.1,63.9,46,0,2,4,1065,2024/25,1065.0,0.0,2.0,4.0,46.0
+495,Isaac Hayden,Newcastle,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+496,Garang Kuol,Newcastle,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+497,Lewis Miley,Newcastle,Midfielder,4.5,0.0,3.1,16.7,21,1,0,0,304,2024/25,304.0,1.0,0.0,0.0,21.0
+498,Joe White,Newcastle,Midfielder,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+499,Alexander Isak,Newcastle,Forward,10.5,0.0,19.1,292.7,211,23,6,12,2758,2024/25,2758.0,23.0,6.0,12.0,211.0
+500,William Osula,Newcastle,Forward,5.5,0.0,0.2,10.5,19,1,0,0,124,2024/25,124.0,1.0,0.0,0.0,19.0
+501,Sean Neave,Newcastle,Forward,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+674,Aaron Ramsdale,Newcastle,Goalkeeper,5.0,0.0,0.7,0.0,0,0,0,0,0,2024/25,2700.0,0.0,0.0,3.0,97.0
+502,Matz Sels,Nott'm Forest,Goalkeeper,5.0,0.0,19.7,96.7,150,0,1,13,3420,2024/25,3420.0,0.0,1.0,13.0,150.0
+503,Carlos Miguel dos Santos Pereira,Nott'm Forest,Goalkeeper,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+504,Matt Turner,Nott'm Forest,Goalkeeper,4.0,0.0,0.8,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+505,Nikola Milenković,Nott'm Forest,Defender,5.5,0.0,9.7,127.2,145,5,2,13,3330,2024/25,3330.0,5.0,2.0,13.0,145.0
+506,Murillo Costa dos Santos,Nott'm Forest,Defender,5.5,0.0,5.4,134.0,130,2,0,12,3188,2024/25,3188.0,2.0,0.0,12.0,130.0
+507,Ola Aina,Nott'm Forest,Defender,5.0,0.0,16.9,94.1,128,2,1,12,2996,2024/25,2996.0,2.0,1.0,12.0,128.0
+508,Neco Williams,Nott'm Forest,Defender,5.0,0.0,7.5,118.0,109,1,3,10,2588,2024/25,2588.0,1.0,3.0,10.0,109.0
+509,David Mota Veiga Teixeira do Carmo,Nott'm Forest,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+510,Jair Paula da Cunha Filho,Nott'm Forest,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+511,Felipe Rodrigues da Silva,Nott'm Forest,Defender,4.5,0.0,0.1,24.0,36,0,0,3,891,2024/25,891.0,0.0,0.0,3.0,36.0
+512,Omar Richards,Nott'm Forest,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+513,Zach Abbott,Nott'm Forest,Defender,4.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+514,Willy Boly,Nott'm Forest,Defender,4.0,0.0,0.6,6.8,6,0,0,0,146,2024/25,146.0,0.0,0.0,0.0,6.0
+515,Morgan Gibbs-White,Nott'm Forest,Midfielder,7.5,0.0,5.1,210.6,154,7,11,13,2806,2024/25,2806.0,7.0,11.0,13.0,154.0
+516,Callum Hudson-Odoi,Nott'm Forest,Midfielder,6.0,0.0,1.5,151.0,103,5,3,11,2190,2024/25,2190.0,5.0,3.0,11.0,103.0
+517,Elliot Anderson,Nott'm Forest,Midfielder,5.5,0.0,6.2,155.6,107,2,6,13,2726,2024/25,2726.0,2.0,6.0,13.0,107.0
+518,João Pedro Ferreira da Silva,Nott'm Forest,Midfielder,5.5,0.0,0.1,64.6,52,3,2,1,835,2024/25,835.0,3.0,2.0,1.0,52.0
+519,Nicolás Domínguez,Nott'm Forest,Midfielder,5.0,0.0,0.0,89.4,54,0,1,7,1954,2024/25,1954.0,0.0,1.0,7.0,54.0
+520,Lewis O'Brien,Nott'm Forest,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+521,Ibrahim Sangaré,Nott'm Forest,Midfielder,5.0,0.0,0.1,23.2,20,0,1,2,584,2024/25,584.0,0.0,1.0,2.0,20.0
+522,Ryan Yates,Nott'm Forest,Midfielder,5.0,0.0,0.2,85.4,67,2,2,6,1901,2024/25,1901.0,2.0,2.0,6.0,67.0
+523,Eric da Silva Moreira,Nott'm Forest,Midfielder,4.5,0.0,0.2,0.6,2,0,0,0,28,2024/25,28.0,0.0,0.0,0.0,2.0
+524,Marko Stamenić,Nott'm Forest,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+525,Chris Wood,Nott'm Forest,Forward,7.5,0.0,14.7,205.6,200,20,3,15,2958,2024/25,2958.0,20.0,3.0,15.0,200.0
+526,Igor Jesus Maciel da Cruz,Nott'm Forest,Forward,6.0,0.0,1.0,0.0,0,0,0,0,0,,,,,,
+527,Taiwo Awoniyi,Nott'm Forest,Forward,5.5,0.0,0.8,21.9,32,1,0,1,398,2024/25,398.0,1.0,0.0,1.0,32.0
+669,Dan Ndoye,Nott'm Forest,Midfielder,6.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+675,Angus Gunn,Nott'm Forest,Goalkeeper,4.0,0.0,0.9,0.0,0,0,0,0,0,2021/22,810.0,0.0,0.0,1.0,31.0
+252,Marc Guiu Paz,Sunderland,Forward,4.5,0.0,13.3,2.2,3,0,0,0,71,2024/25,71.0,0.0,0.0,0.0,3.0
+528,Anthony Patterson,Sunderland,Goalkeeper,4.5,0.0,0.4,0.0,0,0,0,0,0,,,,,,
+529,Simon Moore,Sunderland,Goalkeeper,4.0,0.0,0.5,0.0,0,0,0,0,0,2020/21,0.0,0.0,0.0,0.0,0.0
+530,Blondy Nna Noukeu,Sunderland,Goalkeeper,4.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+531,Daniel Ballard,Sunderland,Defender,4.5,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+532,Trai Hume,Sunderland,Defender,4.5,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+533,Aji Alese,Sunderland,Defender,4.0,0.0,0.0,0.0,0,0,0,0,0,2021/22,0.0,0.0,0.0,0.0,0.0
+534,Joe Anderson,Sunderland,Defender,4.0,0.0,0.5,0.0,0,0,0,0,0,,,,,,
+535,Dennis Cirkin,Sunderland,Defender,4.0,0.0,0.1,0.0,0,0,0,0,0,2019/20,0.0,0.0,0.0,0.0,0.0
+536,Leo Fuhr Hjelde,Sunderland,Defender,4.0,0.0,0.0,0.0,0,0,0,0,0,2022/23,0.0,0.0,0.0,0.0,0.0
+537,Niall Huggins,Sunderland,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,2020/21,37.0,0.0,0.0,0.0,1.0
+538,Zak Johnson,Sunderland,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+539,Luke O'Nien,Sunderland,Defender,4.0,0.0,0.0,0.0,0,0,0,0,0,,,,,,
+540,Timothée Pembélé,Sunderland,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+541,Reinildo Mandava,Sunderland,Defender,4.0,0.0,7.6,0.0,0,0,0,0,0,,,,,,
+542,Jenson Seelt,Sunderland,Defender,4.0,0.0,0.4,0.0,0,0,0,0,0,,,,,,
+543,Simon Adingra,Sunderland,Midfielder,5.5,0.0,2.1,80.9,60,2,3,2,1081,2024/25,1081.0,2.0,3.0,2.0,60.0
+544,Habib Diarra,Sunderland,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+545,Patrick Roberts,Sunderland,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,2019/20,24.0,0.0,0.0,0.0,3.0
+546,Milan Aleksić,Sunderland,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+547,Enzo Le Fée,Sunderland,Midfielder,5.0,0.0,0.7,0.0,0,0,0,0,0,,,,,,
+548,Romaine Mundle,Sunderland,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2022/23,0.0,0.0,0.0,0.0,0.0
+549,Dan Neil,Sunderland,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+550,Ian Poveda-Ocampo,Sunderland,Midfielder,5.0,0.0,0.0,0.0,0,0,0,0,0,2021/22,0.0,0.0,0.0,0.0,0.0
+551,Chris Rigg,Sunderland,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+552,Noah Sadiki,Sunderland,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+553,Chemsdine Talbi,Sunderland,Midfielder,5.0,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+554,Abdoullah Ba,Sunderland,Midfielder,4.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+555,Alan Browne,Sunderland,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+556,Pierre Ekwah Elimby,Sunderland,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2021/22,0.0,0.0,0.0,0.0,0.0
+557,Harrison Jones,Sunderland,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+558,Jay Matete,Sunderland,Midfielder,4.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+559,Nectarios Triantis,Sunderland,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+560,Wilson Isidor,Sunderland,Forward,5.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+561,Eliezer Mayenda Dossou,Sunderland,Forward,5.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+562,Ahmed Abdullahi,Sunderland,Forward,4.5,0.0,0.8,0.0,0,0,0,0,0,,,,,,
+563,Luís Hemir Silva Semedo,Sunderland,Forward,4.5,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+564,Nazarii Rusyn,Sunderland,Forward,4.5,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+668,Granit Xhaka,Sunderland,Midfielder,5.0,0.0,2.6,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+670,Robin Roefs,Sunderland,Goalkeeper,4.5,0.0,0.2,0.0,0,0,0,0,0,,,,,,
+678,Arthur Masuaku,Sunderland,Defender,4.0,0.0,0.1,0.0,0,0,0,0,0,2022/23,0.0,0.0,0.0,0.0,0.0
+565,Guglielmo Vicario,Spurs,Goalkeeper,5.0,0.0,3.5,58.5,66,0,0,4,2160,2024/25,2160.0,0.0,0.0,4.0,66.0
+566,Brandon Austin,Spurs,Goalkeeper,4.0,0.0,0.3,2.0,1,0,0,0,90,2024/25,90.0,0.0,0.0,0.0,1.0
+567,Antonín Kinský,Spurs,Goalkeeper,4.0,0.0,3.2,21.7,17,0,0,1,540,2024/25,540.0,0.0,0.0,1.0,17.0
+568,Pedro Porro Sauceda,Spurs,Defender,5.5,0.0,13.3,191.2,98,2,6,6,2606,2024/25,2606.0,2.0,6.0,6.0,98.0
+569,Cristian Romero,Spurs,Defender,5.0,0.0,2.0,69.0,49,1,1,3,1416,2024/25,1416.0,1.0,1.0,3.0,49.0
+570,Kevin Danso,Spurs,Defender,4.5,0.0,0.1,34.9,16,0,0,1,842,2024/25,842.0,0.0,0.0,1.0,16.0
+571,Ben Davies,Spurs,Defender,4.5,0.0,0.1,43.7,28,0,0,3,1329,2024/25,1329.0,0.0,0.0,3.0,28.0
+572,Radu Drăgușin,Spurs,Defender,4.5,0.0,0.0,36.2,24,0,0,2,1250,2024/25,1250.0,0.0,0.0,2.0,24.0
+573,Djed Spence,Spurs,Defender,4.5,0.0,0.6,76.1,51,1,2,3,1790,2024/25,1790.0,1.0,2.0,3.0,51.0
+574,Destiny Udogie,Spurs,Defender,4.5,0.0,4.0,74.5,43,0,1,2,1923,2024/25,1923.0,0.0,1.0,2.0,43.0
+575,Micky van de Ven,Spurs,Defender,4.5,0.0,21.6,30.9,32,0,2,2,1014,2024/25,1014.0,0.0,2.0,2.0,32.0
+576,Ashley Phillips,Spurs,Defender,4.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+577,Takai Kōta,Spurs,Defender,4.0,0.0,0.3,0.0,0,0,0,0,0,,,,,,
+578,Luka Vušković,Spurs,Defender,4.0,0.0,1.6,0.0,0,0,0,0,0,,,,,,
+579,Son Heung-min,Spurs,Midfielder,8.5,0.0,1.2,207.2,129,7,10,4,2106,2024/25,2106.0,7.0,10.0,4.0,129.0
+580,Brennan Johnson,Spurs,Midfielder,7.0,0.0,4.1,161.0,137,11,6,2,2171,2024/25,2171.0,11.0,6.0,2.0,137.0
+581,James Maddison,Spurs,Midfielder,7.0,0.0,1.2,187.8,133,9,8,6,1799,2024/25,1799.0,9.0,8.0,6.0,133.0
+582,Mohammed Kudus,Spurs,Midfielder,6.5,0.0,23.8,177.5,106,5,4,7,2589,2024/25,2589.0,5.0,4.0,7.0,106.0
+583,Dejan Kulusevski,Spurs,Midfielder,6.5,0.0,0.0,218.7,117,7,4,6,2386,2024/25,2386.0,7.0,4.0,6.0,117.0
+584,Mathys Tel,Spurs,Midfielder,6.5,0.0,0.2,62.3,42,2,2,2,908,2024/25,908.0,2.0,2.0,2.0,42.0
+585,Rodrigo Bentancur,Spurs,Midfielder,5.5,0.0,0.1,70.2,49,2,0,3,1640,2024/25,1640.0,2.0,0.0,3.0,49.0
+586,Lucas Bergvall,Spurs,Midfielder,5.5,0.0,0.2,55.0,44,0,2,3,1200,2024/25,1200.0,0.0,2.0,3.0,44.0
+587,Yves Bissouma,Spurs,Midfielder,5.5,0.0,0.1,48.0,50,2,0,3,1396,2024/25,1396.0,2.0,0.0,3.0,50.0
+588,Wilson Odobert,Spurs,Midfielder,5.5,0.0,0.1,36.7,34,1,0,1,843,2024/25,843.0,1.0,0.0,1.0,34.0
+589,Manor Solomon,Spurs,Midfielder,5.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+590,Bryan Gil Salvatierra,Spurs,Midfielder,5.0,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+591,Archie Gray,Spurs,Midfielder,5.0,0.0,0.2,34.3,45,0,0,2,1750,2024/25,1750.0,0.0,0.0,2.0,45.0
+592,Mikey Moore,Spurs,Midfielder,5.0,0.0,0.0,11.0,19,0,2,0,359,2024/25,359.0,0.0,2.0,0.0,19.0
+593,Pape Matar Sarr,Spurs,Midfielder,5.0,0.0,2.2,87.2,71,3,2,2,1901,2024/25,1901.0,3.0,2.0,2.0,71.0
+594,Yang Min-hyeok,Spurs,Midfielder,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+595,Callum Olusesi,Spurs,Midfielder,4.5,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+596,Dominic Solanke-Mitchell,Spurs,Forward,7.5,0.0,6.4,142.1,108,9,5,4,2199,2024/25,2199.0,9.0,5.0,4.0,108.0
+597,Richarlison de Andrade,Spurs,Forward,6.5,0.0,1.1,47.4,35,4,1,1,497,2024/25,497.0,4.0,1.0,1.0,35.0
+598,Will Lankshear,Spurs,Forward,4.5,0.0,0.2,0.0,3,0,0,0,10,2024/25,10.0,0.0,0.0,0.0,3.0
+599,Dane Scarlett,Spurs,Forward,4.5,0.0,0.8,5.2,6,0,1,0,31,2024/25,31.0,0.0,1.0,0.0,6.0
+673,João Maria Lobo Alves Palhares Costa Palhinha Gonçalves,Spurs,Midfielder,5.5,0.0,0.3,0.0,0,0,0,0,0,2023/24,2698.0,4.0,1.0,9.0,91.0
+600,Alphonse Areola,West Ham,Goalkeeper,4.5,0.0,5.3,62.1,69,0,0,4,2259,2024/25,2259.0,0.0,0.0,4.0,69.0
+601,Wes Foderingham,West Ham,Goalkeeper,4.0,0.0,0.7,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+602,Krisztián Hegyi,West Ham,Goalkeeper,4.0,0.0,0.4,0.0,0,0,0,0,0,2022/23,0.0,0.0,0.0,0.0,0.0
+603,El Hadji Malick Diouf,West Ham,Defender,4.5,0.0,5.6,0.0,0,0,0,0,0,,,,,,
+604,Emerson Palmieri dos Santos,West Ham,Defender,4.5,0.0,0.2,90.4,76,2,1,5,2108,2024/25,2108.0,2.0,1.0,5.0,76.0
+605,Maximilian Kilman,West Ham,Defender,4.5,0.0,0.4,118.8,82,0,1,6,3348,2024/25,3348.0,0.0,1.0,6.0,82.0
+606,Konstantinos Mavropanos,West Ham,Defender,4.5,0.0,0.1,73.2,45,0,0,2,2035,2024/25,2035.0,0.0,0.0,2.0,45.0
+607,Nayef Aguerd,West Ham,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+608,Ollie Scarles,West Ham,Defender,4.5,0.0,0.0,18.6,29,0,0,2,659,2024/25,659.0,0.0,0.0,2.0,29.0
+609,Jean-Clair Todibo,West Ham,Defender,4.5,0.0,0.1,44.5,54,0,0,5,1824,2024/25,1824.0,0.0,0.0,5.0,54.0
+610,Aaron Wan-Bissaka,West Ham,Defender,4.5,0.0,29.7,152.7,118,2,6,6,3154,2024/25,3154.0,2.0,6.0,6.0,118.0
+611,Kaelan Casey,West Ham,Defender,4.0,0.0,0.6,0.2,1,0,0,0,1,2024/25,1.0,0.0,0.0,0.0,1.0
+612,Lucas Tolentino Coelho de Lima,West Ham,Midfielder,6.0,0.0,1.1,132.6,80,4,1,4,2374,2024/25,2374.0,4.0,1.0,4.0,80.0
+613,Tomáš Souček,West Ham,Midfielder,6.0,0.0,1.0,154.0,126,9,2,7,2563,2024/25,2563.0,9.0,2.0,7.0,126.0
+614,James Ward-Prowse,West Ham,Midfielder,6.0,0.0,0.4,80.0,51,1,2,5,1433,2024/25,1433.0,1.0,2.0,5.0,51.0
+615,Crysencio Summerville,West Ham,Midfielder,5.5,0.0,0.0,58.7,33,1,1,2,776,2024/25,776.0,1.0,1.0,2.0,33.0
+616,Edson Álvarez Velázquez,West Ham,Midfielder,5.0,0.0,0.2,54.7,40,0,1,3,1769,2024/25,1769.0,0.0,1.0,3.0,40.0
+617,Maxwel Cornet,West Ham,Midfielder,5.0,0.0,0.1,2.2,1,0,0,0,71,2024/25,71.0,0.0,0.0,0.0,1.0
+618,Guido Rodríguez,West Ham,Midfielder,5.0,0.0,0.1,31.5,36,0,1,4,1147,2024/25,1147.0,0.0,1.0,4.0,36.0
+619,Luis Guilherme Lira dos Santos,West Ham,Midfielder,5.0,0.0,0.1,10.8,12,0,0,0,139,2024/25,139.0,0.0,0.0,0.0,12.0
+620,George Earthy,West Ham,Midfielder,4.5,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+621,Andy Irving,West Ham,Midfielder,4.5,0.0,0.3,8.1,9,0,0,0,161,2024/25,161.0,0.0,0.0,0.0,9.0
+622,Lewis Orford,West Ham,Midfielder,4.5,0.0,0.2,4.0,2,0,0,0,47,2024/25,47.0,0.0,0.0,0.0,2.0
+623,Freddie Potts,West Ham,Midfielder,4.5,0.0,0.8,0.0,0,0,0,0,0,,,,,,
+624,Jarrod Bowen,West Ham,Forward,8.0,0.0,19.0,271.9,193,13,11,8,2974,2024/25,2974.0,13.0,11.0,8.0,193.0
+625,Niclas Füllkrug,West Ham,Forward,6.0,0.0,3.0,56.8,42,3,2,2,783,2024/25,783.0,3.0,2.0,2.0,42.0
+626,Callum Marshall,West Ham,Forward,4.5,0.0,0.8,0.0,0,0,0,0,0,2023/24,0.0,0.0,0.0,0.0,0.0
+659,Kyle Walker-Peters,West Ham,Defender,4.5,0.0,0.5,0.0,0,0,0,0,0,2024/25,2918.0,0.0,3.0,2.0,54.0
+671,Callum Wilson,West Ham,Forward,6.0,0.0,0.4,0.0,0,0,0,0,0,2024/25,355.0,0.0,0.0,0.0,19.0
+679,Mads Hermansen,West Ham,Goalkeeper,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,2385.0,0.0,0.0,1.0,63.0
+627,Sam Johnstone,Wolves,Goalkeeper,4.5,0.0,0.2,20.4,12,0,0,0,630,2024/25,630.0,0.0,0.0,0.0,12.0
+628,José Malheiro de Sá,Wolves,Goalkeeper,4.5,0.0,2.3,63.4,93,0,0,7,2610,2024/25,2610.0,0.0,0.0,7.0,93.0
+629,Daniel Bentley,Wolves,Goalkeeper,4.0,0.0,1.0,6.0,9,0,0,1,180,2024/25,180.0,0.0,0.0,1.0,9.0
+630,Tom King,Wolves,Goalkeeper,4.0,0.0,2.1,0.0,1,0,0,0,1,2024/25,1.0,0.0,0.0,0.0,1.0
+631,Emmanuel Agbadou,Wolves,Defender,4.5,0.0,0.3,52.0,45,1,0,4,1410,2024/25,1410.0,1.0,0.0,4.0,45.0
+632,Matt Doherty,Wolves,Defender,4.5,0.0,0.2,81.8,75,2,1,6,2105,2024/25,2105.0,2.0,1.0,6.0,75.0
+633,Hugo Bueno López,Wolves,Defender,4.5,0.0,0.1,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+634,Yerson Mosquera Valdelamar,Wolves,Defender,4.5,0.0,0.1,16.0,3,0,0,0,441,2024/25,441.0,0.0,0.0,0.0,3.0
+635,Rodrigo Martins Gomes,Wolves,Defender,4.5,0.0,0.1,47.6,42,2,0,1,794,2024/25,794.0,2.0,0.0,1.0,42.0
+636,Santiago Ignacio Bueno,Wolves,Defender,4.5,0.0,0.1,44.2,52,0,0,5,1678,2024/25,1678.0,0.0,0.0,5.0,52.0
+637,Toti Gomes,Wolves,Defender,4.5,0.0,0.2,86.5,79,0,1,8,2613,2024/25,2613.0,0.0,1.0,8.0,79.0
+638,Ki-Jana Hoever,Wolves,Defender,4.0,0.0,2.6,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+639,Bastien Meupiyou Menadjou,Wolves,Defender,4.0,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+640,Pedro Cardoso de Lima,Wolves,Defender,4.0,0.0,1.3,6.9,2,0,0,0,69,2024/25,69.0,0.0,0.0,0.0,2.0
+641,Alfie Pond,Wolves,Defender,4.0,0.0,2.0,0.0,1,0,0,0,1,2024/25,1.0,0.0,0.0,0.0,1.0
+642,Hwang Hee-chan,Wolves,Midfielder,6.0,0.0,0.2,26.7,37,2,1,0,646,2024/25,646.0,2.0,1.0,0.0,37.0
+643,André Trindade da Costa Neto,Wolves,Midfielder,5.5,0.0,0.1,69.7,61,0,0,7,2472,2024/25,2472.0,0.0,0.0,7.0,61.0
+644,Jean-Ricner Bellegarde,Wolves,Midfielder,5.5,0.0,0.1,97.2,90,2,7,6,1666,2024/25,1666.0,2.0,7.0,6.0,90.0
+645,Fer López González,Wolves,Midfielder,5.5,0.0,0.1,0.0,0,0,0,0,0,,,,,,
+646,João Victor Gomes da Silva,Wolves,Midfielder,5.5,0.0,0.1,117.3,87,3,1,6,2975,2024/25,2975.0,3.0,1.0,6.0,87.0
+647,Gonçalo Manuel Ganchinho Guedes,Wolves,Midfielder,5.5,0.0,0.0,64.0,62,2,4,3,979,2024/25,979.0,2.0,4.0,3.0,62.0
+648,Marshall Munetsi,Wolves,Midfielder,5.5,0.0,0.1,52.3,50,2,2,5,1077,2024/25,1077.0,2.0,2.0,5.0,50.0
+649,Boubacar Traoré,Wolves,Midfielder,5.0,0.0,0.0,0.4,1,0,0,0,1,2024/25,1.0,0.0,0.0,0.0,1.0
+650,Tawanda Chirewa,Wolves,Midfielder,4.5,0.0,0.3,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+651,Tom Edozie,Wolves,Midfielder,4.5,0.0,0.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+652,Enso González Medina,Wolves,Midfielder,4.5,0.0,1.5,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+653,Joe Hodge,Wolves,Midfielder,4.5,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+654,Jørgen Strand Larsen,Wolves,Forward,6.5,0.0,5.2,179.5,145,14,4,7,2587,2024/25,2587.0,14.0,4.0,7.0,145.0
+655,Fábio Soares Silva,Wolves,Forward,5.0,0.0,0.6,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+656,Saša Kalajdžić,Wolves,Forward,5.0,0.0,0.2,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+657,Leon Chiwome,Wolves,Forward,4.5,0.0,0.0,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+658,Nathan Fraser,Wolves,Forward,4.5,0.0,2.4,0.0,0,0,0,0,0,2024/25,0.0,0.0,0.0,0.0,0.0
+663,Jhon Arias,Wolves,Midfielder,5.5,0.0,1.0,0.0,0,0,0,0,0,,,,,,
