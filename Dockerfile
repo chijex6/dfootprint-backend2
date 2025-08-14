@@ -41,7 +41,7 @@ EXPOSE 8000
 # --------------------------
 # Adjust workers based on CPU cores: (2 x $cores) + 1
 # Example: 4 cores => workers=9
-CMD ["gunicorn", "main:app", \
+CMD ["gunicorn", "server:app", \
      "-k", "uvicorn.workers.UvicornWorker", \
      "--bind", "0.0.0.0:8000", \
      "--workers", "4", \
