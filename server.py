@@ -252,7 +252,7 @@ async def extract_colors(image_path: str, remove_background: bool = True) -> dic
         if not script_path.exists():
             raise FileNotFoundError(f"color_extractor.py not found at {script_path}")
         
-        cmd = ["./venv/scripts/python", str(script_path), image_path]
+        cmd = ["python", str(script_path), image_path]
         if not remove_background:
             cmd.append("--keep-background")
         
