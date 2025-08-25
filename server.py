@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends, status, UploadFile, File, Form
+from fastapi import FastAPI, HTTPException, Depends, status, UploadFile, File, Form, Query
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Text, Boolean
@@ -252,7 +252,7 @@ async def extract_colors(image_path: str, remove_background: bool = True) -> dic
         if not script_path.exists():
             raise FileNotFoundError(f"color_extractor.py not found at {script_path}")
         
-        cmd = ["python", str(script_path), image_path]
+        cmd = ["./venv/scripts/python", str(script_path), image_path]
         if not remove_background:
             cmd.append("--keep-background")
         
@@ -359,7 +359,6 @@ async def upload_image(
             temp_file_path = temp_file.name
             content = await file.read()
             temp_file.write(content)
-        print("here 1")
         
         # Process image (Colour extraction + Cloudinary upload)
         result = await process_image(temp_file_path, file.filename, removeBackground)
@@ -545,7 +544,7 @@ async def create_product(product: ProductCreate, db: Session = Depends(get_db)):
                     color_name=image["colourName"],
                     width=image.get("width"),
                     height=image.get("height"),
-                    slug=f"{db_product.id}-{image['id']}"
+                    slug=f"{db_product.name}-{image['colourName']}"
                 )
                 db.add(db_image)
             
@@ -563,14 +562,30 @@ async def create_product(product: ProductCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail="Failed to create product")
 
 @app.get("/products")
-async def get_products(db: Session = Depends(get_db)):
-    """Get all products with their colors"""
+async def get_products(
+    page: int = Query(1, ge=1, description="Page number starting from 1"),
+    limit: int = Query(12, ge=1, le=100, description="Number of products per page"),
+    db: Session = Depends(get_db)
+):
+    """Get products with pagination"""
     try:
-        products = db.query(Product).all()
+        # Calculate offset
+        offset = (page - 1) * limit
+        
+        # Get total count for pagination info
+        total_products = db.query(Product).count()
+        
+        # Get paginated products
+        products = db.query(Product)\
+            .offset(offset)\
+            .limit(limit)\
+            .all()
         
         result = []
         for product in products:
-            images = db.query(Product_image).filter(Product_image.product_id == product.id).all()
+            images = db.query(Product_image)\
+                .filter(Product_image.product_id == product.id)\
+                .all()
             
             product_data = {
                 "id": product.id,
@@ -585,7 +600,7 @@ async def get_products(db: Session = Depends(get_db)):
                         "url": image.url,
                         "id": image.id,
                         "colourHex": image.colour,
-                        "colourNames": image.color_name,
+                        "colourName": image.color_name,
                         "width": image.width,
                         "height": image.height
                     }
@@ -594,14 +609,27 @@ async def get_products(db: Session = Depends(get_db)):
             }
             result.append(product_data)
         
+        # Calculate pagination metadata
+        total_pages = (total_products + limit - 1) // limit  # Ceiling division
+        has_next = page < total_pages
+        has_prev = page > 1
+        
         return {
             "success": True,
-            "products": result
+            "products": result,
+            "pagination": {
+                "current_page": page,
+                "per_page": limit,
+                "total_products": total_products,
+                "total_pages": total_pages,
+                "has_next": has_next,
+                "has_prev": has_prev
+            }
         }
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Failed to fetch products")
-
+        raise HTTPException(status_code=500, detail=f"Failed to fetch products: {str(e)}")
+    
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
