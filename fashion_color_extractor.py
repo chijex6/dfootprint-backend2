@@ -6,6 +6,7 @@ from collections import Counter
 import cv2
 import json
 import requests
+import gc
 import time
 from typing import Dict, List, Tuple, Optional
 
@@ -253,6 +254,10 @@ class FashionColorExtractor:
         try:
             # Load image
             image = Image.open(image_path).convert('RGB')
+
+            max_dim = 600
+            if max(image.size) > max_dim:
+                image.thumbnail((max_dim, max_dim), Image.Resampling.LANCZOS)
             
             # Remove background if requested
             if remove_bg:
@@ -295,6 +300,8 @@ class FashionColorExtractor:
                 'dominant_color': None,
                 'color_palette': []
             }
+        finally:
+            gc.collect()
 
 # Custom JSON encoder to handle numpy types (backup solution)
 class NumpyJSONEncoder(json.JSONEncoder):
