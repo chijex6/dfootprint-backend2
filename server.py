@@ -27,8 +27,17 @@ load_dotenv()
 SECRET_KEY = "your-secret-key-here-change-in-production"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ENVIRONMENT = os.getenv("ENVIRONMENT")
 DATABASE_URL = os.getenv("DATABASE_URL")
 UPLOAD_DIRECTORY = "uploads"
+
+print(ENVIRONMENT)
+
+def get_start_command() -> str:
+    if ENVIRONMENT == "production":
+        return "python"
+    else : 
+        return "./venv/scripts/python"
 
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
@@ -251,8 +260,8 @@ async def extract_colors(image_path: str, remove_background: bool = True) -> dic
         
         if not script_path.exists():
             raise FileNotFoundError(f"color_extractor.py not found at {script_path}")
-        
-        cmd = ["python", str(script_path), image_path]
+
+        cmd = [get_start_command(), str(script_path), image_path]
         if not remove_background:
             cmd.append("--keep-background")
         
@@ -522,7 +531,7 @@ async def create_product(product: ProductCreate, db: Session = Depends(get_db)):
         # Insert product
         db_product = Product(
             name=product.name,
-            price=int(product.price * 100),  # Convert to cents
+            price=int(product.price),  # Convert to cents
             description=product.description,
             featured=product.featured,
             category=product.category,
@@ -629,6 +638,136 @@ async def get_products(
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch products: {str(e)}")
+
+@app.get("/products/{product_id}")
+async def get_product(product_id: int, db: Session = Depends(get_db)):
+    """Get a single product by ID"""
+    try:
+        product = db.query(Product).filter(Product.id == product_id).first()
+        if not product:
+            raise HTTPException(status_code=404, detail="Product not found")
+        
+        images = db.query(Product_image).filter(Product_image.product_id == product_id).all()
+        
+        return {
+            "id": product.id,
+            "name": product.name,
+            "price": product.price / 100,  # Convert back from cents
+            "description": product.description,
+            "sizes": json.loads(product.sizes) if product.sizes else [],
+            "featured": product.featured,
+            "category": product.category,
+            "images": [
+                {
+                    "id": image.id,
+                    "url": image.url,
+                    "colourHex": image.colour,
+                    "colourName": image.color_name,
+                    "width": image.width,
+                    "height": image.height
+                }
+                for image in images
+            ]
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch product: {str(e)}")
+
+@app.delete("/products/{product_id}")
+async def delete_product(product_id: int, db: Session = Depends(get_db)):
+    """Delete a product by ID"""
+    try:
+        db_product = db.query(Product).filter(Product.id == product_id).first()
+        if not db_product:
+            raise HTTPException(status_code=404, detail="Product not found")
+        
+        db.delete(db_product)
+        db.commit()
+        
+        return {"success": True, "message": "Product deleted successfully"}
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Failed to delete product: {str(e)}")
+
+@app.put("/products/{product_id}")
+async def update_product(
+    product_id: int, 
+    product: ProductCreate, 
+    db: Session = Depends(get_db)
+):
+    """Update an existing product"""
+    try:
+        # Get existing product
+        db_product = db.query(Product).filter(Product.id == product_id).first()
+        if not db_product:
+            raise HTTPException(status_code=404, detail="Product not found")
+        
+        # Update product fields
+        db_product.name = product.name
+        db_product.price = int(product.price)  # Convert to cents
+        db_product.description = product.description
+        db_product.featured = product.featured
+        db_product.category = product.category
+        db_product.sizes = json.dumps(product.sizes)
+        
+        # Get current images from database
+        existing_images = db.query(Product_image).filter(Product_image.product_id == product_id).all()
+        existing_image_ids = {img.id for img in existing_images}
+        
+        # Get new image IDs from request
+        new_image_ids = {img["id"] for img in product.images} if product.images else set()
+        
+        # Delete removed images
+        images_to_delete = existing_image_ids - new_image_ids
+        if images_to_delete:
+            db.query(Product_image).filter(
+                Product_image.product_id == product_id,
+                Product_image.id.in_(images_to_delete)
+            ).delete(synchronize_session=False)
+        
+        # Update or add new images
+        if product.images:
+            for image in product.images:
+                existing_image = db.query(Product_image).filter(
+                    Product_image.id == image["id"]
+                ).first()
+                
+                if existing_image:
+                    # Update existing image
+                    existing_image.url = image["url"]
+                    existing_image.colour = image["colourHex"]
+                    existing_image.color_name = image["colourName"]
+                    existing_image.width = image.get("width")
+                    existing_image.height = image.get("height")
+                else:
+                    # Add new image
+                    db_image = Product_image(
+                        id=image["id"],
+                        product_id=product_id,
+                        url=image["url"],
+                        colour=image["colourHex"],
+                        color_name=image["colourName"],
+                        width=image.get("width"),
+                        height=image.get("height"),
+                        slug=f"{db_product.name}-{image['colourName']}"
+                    )
+                    db.add(db_image)
+        
+        db.commit()
+        
+        return {"success": True, "message": "Product updated successfully"}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        db.rollback()
+        print("Error updating product:", e)
+        raise HTTPException(status_code=500, detail="Failed to update product")
     
 if __name__ == "__main__":
     import uvicorn
