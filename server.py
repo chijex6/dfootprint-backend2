@@ -11,7 +11,7 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.exceptions import Error as CloudinaryError
 from jose import JWTError, jwt
-from datetime import datetime, timedelta, UTC
+from datetime import datetime, timedelta, UTC, timezone
 from dotenv import load_dotenv
 import os
 from typing import Optional, List
@@ -604,6 +604,8 @@ async def get_products(
                 "sizes": json.loads(product.sizes) if product.sizes else [],
                 "featured": product.featured,
                 "category": product.category,
+                "created_at": product.created_at,
+                "new": datetime.now(timezone.utc) - (product.created_at.replace(tzinfo=timezone.utc) if product.created_at.tzinfo is None else product.created_at) < timedelta(days=7),
                 "images": [
                     {
                         "url": image.url,
@@ -648,7 +650,7 @@ async def get_product(product_id: int, db: Session = Depends(get_db)):
             raise HTTPException(status_code=404, detail="Product not found")
         
         images = db.query(Product_image).filter(Product_image.product_id == product_id).all()
-        
+
         return {
             "id": product.id,
             "name": product.name,
@@ -656,7 +658,9 @@ async def get_product(product_id: int, db: Session = Depends(get_db)):
             "description": product.description,
             "sizes": json.loads(product.sizes) if product.sizes else [],
             "featured": product.featured,
+            "new": datetime.now(timezone.utc) - (product.created_at.replace(tzinfo=timezone.utc) if product.created_at.tzinfo is None else product.created_at) < timedelta(days=7),
             "category": product.category,
+            "created_at": product.created_at,
             "images": [
                 {
                     "id": image.id,
