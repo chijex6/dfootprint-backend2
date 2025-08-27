@@ -1,10 +1,11 @@
-from fastapi import FastAPI, HTTPException, Depends, status, UploadFile, File, Form, Query
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi import FastAPI, HTTPException, Depends, status, UploadFile, File, Form, Query, Request, Response, Cookie
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Text, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from passlib.context import CryptContext
 import cloudinary
 import cloudinary.uploader
@@ -14,24 +15,30 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta, UTC, timezone
 from dotenv import load_dotenv
 import os
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 import tempfile
 import subprocess
 import json
 import asyncio
 from pathlib import Path
+from collections import defaultdict
+import time
+from functools import wraps
+import ipaddress
 
 load_dotenv()
 
 # Configuration
-SECRET_KEY = "your-secret-key-here-change-in-production"
+SECRET_KEY = os.getenv("SECRET_KEY")
+origins = [
+    "http://localhost:3000",   # Next.js dev server
+]
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 ENVIRONMENT = os.getenv("ENVIRONMENT")
 DATABASE_URL = os.getenv("DATABASE_URL")
 UPLOAD_DIRECTORY = "uploads"
-
-print(ENVIRONMENT)
+IS_PROD = os.getenv("ENV") == "production"
 
 def get_start_command() -> str:
     if ENVIRONMENT == "production":
@@ -40,6 +47,11 @@ def get_start_command() -> str:
         return "./venv/scripts/python"
 
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
+
+# Rate limiting storage (in production, use Redis)
+rate_limit_storage = defaultdict(list)
+RATE_LIMIT_REQUESTS = 5  # 5 attempts
+RATE_LIMIT_WINDOW = 900  # 15 minutes in seconds
 
 # Cloudinary configuration
 cloudinary.config(
@@ -77,6 +89,17 @@ class Product_image(Base):
     height = Column(Integer)
     color_name = Column(String(50), nullable=False)
 
+class Admins(Base):
+    __tablename__ = "admins"
+    id = Column(Integer, primary_key=True, index=True)
+    fullname = Column(String(255))
+    email = Column(String(255), unique=True, index=True)
+    role = Column(String(50), default="admin")
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    password = Column(String(255))
+    permissions = Column(Text)
+
 Base.metadata.create_all(bind=engine)
 
 # Pydantic Models
@@ -95,7 +118,7 @@ class DominantColor(BaseModel):
 class ColorData(BaseModel):
     success: bool
     dominant_color: DominantColor
-    color_palette: List[ColorInfo]  # Changed from 'palette' to match your data
+    color_palette: List[ColorInfo]
     image_processed: str
 
 class CloudinaryResult(BaseModel):
@@ -154,8 +177,8 @@ class ImageUploadResponse(BaseModel):
     url: str
     colorName: str
     colorHex: str
-    width: int  # Added width
-    height: int  # Added height
+    width: int
+    height: int
 
 class BatchResult(BaseModel):
     filename: str
@@ -192,6 +215,30 @@ class FileUploadResponse(BaseModel):
     file_size: int
     uploaded_at: datetime
 
+# Authentication Models
+class AdminLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+class AdminCreate(BaseModel):
+    fullname: str
+    email: EmailStr
+    password: str
+    role: str = "admin"
+    permissions: List[str] = []
+
+class AdminResponse(BaseModel):
+    id: int
+    fullname: str
+    email: str
+    role: str
+    permissions: List[str]
+    created_at: datetime
+    updated_at: datetime
+
+class TokenData(BaseModel):
+    email: Optional[str] = None
+
 # Security
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 security = HTTPBearer()
@@ -202,15 +249,80 @@ def verify_password(plain_password, hashed_password):
 def get_password_hash(password):
     return pwd_context.hash(password)
 
+def decode_access_token(token: str) -> Optional[dict]:
+    try:
+        # decode and validate exp claim automatically
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        return payload
+    except JWTError:
+        return None
+
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
     if expires_delta:
-        expire = datetime.utcnow() + expires_delta
+        expire = datetime.now(UTC) + expires_delta
     else:
-        expire = datetime.utcnow() + timedelta(minutes=15)
+        expire = datetime.now(UTC) + timedelta(minutes=15)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
+
+def get_client_ip(request: Request) -> str:
+    """Get client IP address, considering proxy headers"""
+    # Check for Render.com forwarded IP
+    forwarded_for = request.headers.get("X-Forwarded-For")
+    if forwarded_for:
+        return forwarded_for.split(",")[0].strip()
+    
+    # Check for real IP
+    real_ip = request.headers.get("X-Real-IP")
+    if real_ip:
+        return real_ip
+    
+    # Fallback to client host
+    return request.client.host if request.client else "unknown"
+
+def is_rate_limited(ip: str) -> bool:
+    """Check if IP is rate limited"""
+    now = time.time()
+    
+    # Clean old entries
+    rate_limit_storage[ip] = [
+        timestamp for timestamp in rate_limit_storage[ip]
+        if now - timestamp < RATE_LIMIT_WINDOW
+    ]
+    
+    # Check if rate limit exceeded
+    if len(rate_limit_storage[ip]) >= RATE_LIMIT_REQUESTS:
+        return True
+    
+    # Add current attempt
+    rate_limit_storage[ip].append(now)
+    return False
+
+def rate_limit_decorator():
+    """Decorator for rate limiting endpoints"""
+    def decorator(func):
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            # Find request object in args
+            request = None
+            for arg in args:
+                if isinstance(arg, Request):
+                    request = arg
+                    break
+            
+            if request:
+                client_ip = get_client_ip(request)
+                if is_rate_limited(client_ip):
+                    raise HTTPException(
+                        status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                        detail=f"Too many login attempts. Try again in {RATE_LIMIT_WINDOW//60} minutes."
+                    )
+            
+            return await func(*args, **kwargs)
+        return wrapper
+    return decorator
 
 # Database dependency
 def get_db():
@@ -219,6 +331,21 @@ def get_db():
         yield db
     finally:
         db.close()
+
+def get_current_user(
+    access_token: str = Cookie(None),
+    db: Session = Depends(get_db)
+):
+    if not access_token:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+
+    payload = decode_access_token(access_token)  # your JWT decode
+    email = payload.get("sub")
+    admin = db.query(Admins).filter(Admins.email == email).first()
+    if not admin:
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+
+    return admin
 
 # Utility functions
 async def upload_to_cloudinary(image_path: str, options: dict = None) -> dict:
@@ -321,11 +448,12 @@ app = FastAPI(title="FastAPI with MySQL, Authentication, and Image Processing", 
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=origins,         # 👈 explicitly allow Next.js
+    allow_credentials=True,        # 👈 allow cookies/auth headers
+    allow_methods=["*"],           # GET, POST, PUT, DELETE, etc.
+    allow_headers=["*"],           # Allow all headers (Authorization, Content-Type, etc.)
 )
+
 
 # Routes
 @app.get("/")
@@ -338,7 +466,173 @@ async def health_check():
     return {
         "status": "healthy",
         "service": "Fashion Colour Extractor API",
-        "timestamp": datetime.utcnow().isoformat()
+        "timestamp": datetime.now(UTC).isoformat()
+    }
+
+# Authentication Routes
+@app.post("/admin/login", response_model=Token)
+@rate_limit_decorator()
+async def login_admin(
+    request: Request,
+    admin_data: AdminLogin,
+    db: Session = Depends(get_db)
+):
+    """Admin login with IP rate limiting"""
+    
+    # Get admin by email
+    admin = db.query(Admins).filter(Admins.email == admin_data.email).first()
+    
+    if not admin or not verify_password(admin_data.password, admin.password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+        )
+    
+    # Create access token
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": admin.email}, expires_delta=access_token_expires
+    )
+
+    # Set cookie
+    response = JSONResponse( content = {"message": "Login successful"})
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,  # JS can't read it
+        secure=IS_PROD,  # only HTTPS in prod
+        samesite="strict" if IS_PROD else "lax",  # dev more lenient
+        max_age=ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+        expires=ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+    )
+
+    return response
+
+@app.post("/admin/logout")
+async def logout_admin():
+    response = JSONResponse( content = {"message": "Logged out successfully"})
+    response.delete_cookie(
+        key="access_token",
+        httponly=True,
+        samesite="strict" if IS_PROD else "lax",  # or "strict" in prod
+        secure=IS_PROD     # True in prod with HTTPS
+    )
+    return response
+
+@app.get("/admin/me", response_model=AdminResponse)
+async def get_current_admin(current_admin: Admins = Depends(get_current_user)):
+    """Get current admin user data from token"""
+    
+    # Parse permissions JSON
+    try:
+        permissions = json.loads(current_admin.permissions) if current_admin.permissions else {}
+    except json.JSONDecodeError:
+        permissions = {}
+    
+    return AdminResponse(
+        id=current_admin.id,
+        fullname=current_admin.fullname,
+        email=current_admin.email,
+        role=current_admin.role,
+        permissions=permissions,
+        created_at=current_admin.created_at,
+        updated_at=current_admin.updated_at
+    )
+
+@app.post("/admin/create", response_model=dict)
+async def create_admin(
+    admin_data: AdminCreate,
+    db: Session = Depends(get_db),
+    current_admin: Admins = Depends(get_current_user)
+):
+    """Create a new admin (requires authentication)"""
+    
+    # Check if current admin has permission to create admins
+    try:
+        current_permissions = json.loads(current_admin.permissions) if current_admin.permissions else {}
+    except json.JSONDecodeError:
+        current_permissions = {}
+    
+    # Check if user has admin creation permission or is super admin
+    if not (current_permissions.get("create_admin", False) or current_admin.role == "super_admin"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Insufficient permissions to create admin"
+        )
+    
+    # Check if admin with email already exists
+    existing_admin = db.query(Admins).filter(Admins.email == admin_data.email).first()
+    if existing_admin:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Admin with this email already exists"
+        )
+    
+    # Hash password
+    hashed_password = get_password_hash(admin_data.password)
+    
+    # Create new admin
+    db_admin = Admins(
+        fullname=admin_data.fullname,
+        email=admin_data.email,
+        password=hashed_password,
+        role=admin_data.role,
+        permissions=json.dumps(admin_data.permissions),
+        created_at=datetime.now(UTC),
+        updated_at=datetime.now(UTC)
+    )
+    
+    try:
+        db.add(db_admin)
+        db.commit()
+        db.refresh(db_admin)
+        
+        return {
+            "success": True,
+            "message": "Admin created successfully",
+            "admin_id": db_admin.id,
+            "email": db_admin.email
+        }
+        
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to create admin"
+        )
+
+# Protected endpoint example
+@app.get("/admin/stats")
+async def get_admin_stats(
+    current_admin: Admins = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Get admin dashboard stats (protected route)"""
+    
+    # Check permissions
+    try:
+        permissions = json.loads(current_admin.permissions) if current_admin.permissions else {}
+    except json.JSONDecodeError:
+        permissions = {}
+    
+    if not (permissions.get("view_stats", False) or current_admin.role == "super_admin"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Insufficient permissions to view stats"
+        )
+    
+    # Get stats
+    total_products = db.query(Product).count()
+    total_admins = db.query(Admins).count()
+    
+    return {
+        "success": True,
+        "stats": {
+            "total_products": total_products,
+            "total_admins": total_admins,
+            "current_admin": current_admin.fullname,
+            "current_role": current_admin.role
+        }
     }
 
 @app.post("/upload-image")
@@ -387,15 +681,15 @@ async def upload_image(
                 "remove_background": removeBackground
             },
             metadata={
-                "processed_at": datetime.now(UTC).isoformat(),  # Fixed deprecation warning
+                "processed_at": datetime.now(UTC).isoformat(),
                 "processing_time_ms": processing_time
             },
             id=result["cloudinary"]["public_id"],
             url=result["cloudinary"]["secure_url"],
             colorName=result["colors"]["dominant_color"]["name"],
             colorHex=result["colors"]["dominant_color"]["hex"],
-            width=result["cloudinary"]["width"],  # Added width from cloudinary data
-            height=result["cloudinary"]["height"]  # Added height from cloudinary data
+            width=result["cloudinary"]["width"],
+            height=result["cloudinary"]["height"]
         )
         
         return response
@@ -525,8 +819,25 @@ async def upload_batch(
                 pass
 
 @app.post("/products")
-async def create_product(product: ProductCreate, db: Session = Depends(get_db)):
-    """Create a new product with images"""
+async def create_product(
+    product: ProductCreate, 
+    db: Session = Depends(get_db),
+    current_admin: Admins = Depends(get_current_user)
+):
+    """Create a new product with images (protected)"""
+    
+    # Check permissions
+    try:
+        permissions = json.loads(current_admin.permissions) if current_admin.permissions else {}
+    except json.JSONDecodeError:
+        permissions = {}
+    
+    if not (permissions.get("create_product", False) or current_admin.role == "super_admin"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Insufficient permissions to create product"
+        )
+    
     try:
         # Insert product
         db_product = Product(
@@ -680,13 +991,34 @@ async def get_product(product_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=f"Failed to fetch product: {str(e)}")
 
 @app.delete("/products/{product_id}")
-async def delete_product(product_id: int, db: Session = Depends(get_db)):
-    """Delete a product by ID"""
+async def delete_product(
+    product_id: int, 
+    db: Session = Depends(get_db),
+    current_admin: Admins = Depends(get_current_user)
+):
+    """Delete a product by ID (protected)"""
+    
+    # Check permissions
+    try:
+        permissions = json.loads(current_admin.permissions) if current_admin.permissions else {}
+    except json.JSONDecodeError:
+        permissions = {}
+    
+    if not (permissions.get("delete_product", False) or current_admin.role == "super_admin"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Insufficient permissions to delete product"
+        )
+    
     try:
         db_product = db.query(Product).filter(Product.id == product_id).first()
         if not db_product:
             raise HTTPException(status_code=404, detail="Product not found")
         
+        # Delete associated images first
+        db.query(Product_image).filter(Product_image.product_id == product_id).delete()
+        
+        # Delete product
         db.delete(db_product)
         db.commit()
         
@@ -702,9 +1034,23 @@ async def delete_product(product_id: int, db: Session = Depends(get_db)):
 async def update_product(
     product_id: int, 
     product: ProductCreate, 
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_admin: Admins = Depends(get_current_user)
 ):
-    """Update an existing product"""
+    """Update an existing product (protected)"""
+    
+    # Check permissions
+    try:
+        permissions = json.loads(current_admin.permissions) if current_admin.permissions else {}
+    except json.JSONDecodeError:
+        permissions = {}
+    
+    if not (permissions.get("edit_product", False) or current_admin.role == "super_admin"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Insufficient permissions to edit product"
+        )
+    
     try:
         # Get existing product
         db_product = db.query(Product).filter(Product.id == product_id).first()
@@ -718,6 +1064,7 @@ async def update_product(
         db_product.featured = product.featured
         db_product.category = product.category
         db_product.sizes = json.dumps(product.sizes)
+        db_product.updated_at = datetime.now(UTC)
         
         # Get current images from database
         existing_images = db.query(Product_image).filter(Product_image.product_id == product_id).all()
@@ -772,7 +1119,217 @@ async def update_product(
         db.rollback()
         print("Error updating product:", e)
         raise HTTPException(status_code=500, detail="Failed to update product")
+
+# Additional admin management endpoints
+@app.get("/admin/list")
+async def list_admins(
+    page: int = Query(1, ge=1),
+    limit: int = Query(10, ge=1, le=50),
+    current_admin: Admins = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """List all admins (super admin only)"""
     
+    if current_admin.role != "super_admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only super admin can list all admins"
+        )
+    
+    offset = (page - 1) * limit
+    total_admins = db.query(Admins).count()
+    admins = db.query(Admins).offset(offset).limit(limit).all()
+    
+    admin_list = []
+    for admin in admins:
+        try:
+            permissions = json.loads(admin.permissions) if admin.permissions else {}
+        except json.JSONDecodeError:
+            permissions = {}
+        
+        admin_list.append({
+            "id": admin.id,
+            "fullname": admin.fullname,
+            "email": admin.email,
+            "role": admin.role,
+            "permissions": permissions,
+            "created_at": admin.created_at,
+            "updated_at": admin.updated_at
+        })
+    
+    total_pages = (total_admins + limit - 1) // limit
+    
+    return {
+        "success": True,
+        "admins": admin_list,
+        "pagination": {
+            "current_page": page,
+            "per_page": limit,
+            "total_admins": total_admins,
+            "total_pages": total_pages,
+            "has_next": page < total_pages,
+            "has_prev": page > 1
+        }
+    }
+
+@app.put("/admin/{admin_id}/permissions")
+async def update_admin_permissions(
+    admin_id: int,
+    permissions: Dict[str, Any],
+    current_admin: Admins = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Update admin permissions (super admin only)"""
+    
+    if current_admin.role != "super_admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only super admin can update permissions"
+        )
+    
+    admin = db.query(Admins).filter(Admins.id == admin_id).first()
+    if not admin:
+        raise HTTPException(status_code=404, detail="Admin not found")
+    
+    if admin.id == current_admin.id and not permissions.get("create_admin", False):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Cannot remove your own admin creation permission"
+        )
+    
+    try:
+        admin.permissions = json.dumps(permissions)
+        admin.updated_at = datetime.now(UTC)
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": "Permissions updated successfully"
+        }
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail="Failed to update permissions")
+
+@app.delete("/admin/{admin_id}")
+async def delete_admin(
+    admin_id: int,
+    current_admin: Admins = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Delete admin (super admin only, cannot delete self)"""
+    
+    if current_admin.role != "super_admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only super admin can delete admins"
+        )
+    
+    if admin_id == current_admin.id:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Cannot delete your own account"
+        )
+    
+    admin = db.query(Admins).filter(Admins.id == admin_id).first()
+    if not admin:
+        raise HTTPException(status_code=404, detail="Admin not found")
+    
+    try:
+        db.delete(admin)
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": "Admin deleted successfully"
+        }
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail="Failed to delete admin")
+
+@app.post("/admin/change-password")
+async def change_password(
+    old_password: str = Form(...),
+    new_password: str = Form(...),
+    current_admin: Admins = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Change admin password"""
+    
+    # Verify old password
+    if not verify_password(old_password, current_admin.password):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Incorrect current password"
+        )
+    
+    # Validate new password (you can add more validation here)
+    if len(new_password) < 6:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="New password must be at least 6 characters long"
+        )
+    
+    try:
+        # Update password
+        current_admin.password = get_password_hash(new_password)
+        current_admin.updated_at = datetime.now(UTC)
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": "Password changed successfully"
+        }
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail="Failed to change password")
+
+# Rate limit info endpoint (for debugging)
+@app.get("/admin/rate-limit-info")
+async def get_rate_limit_info(
+    request: Request,
+    current_admin: Admins = Depends(get_current_user)
+):
+    """Get rate limit information for current IP (admin only)"""
+    
+    if current_admin.role != "super_admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only super admin can view rate limit info"
+        )
+    
+    client_ip = get_client_ip(request)
+    now = time.time()
+    
+    # Clean old entries for this IP
+    rate_limit_storage[client_ip] = [
+        timestamp for timestamp in rate_limit_storage[client_ip]
+        if now - timestamp < RATE_LIMIT_WINDOW
+    ]
+    
+    attempts_count = len(rate_limit_storage[client_ip])
+    remaining_attempts = max(0, RATE_LIMIT_REQUESTS - attempts_count)
+    
+    # Calculate reset time
+    if rate_limit_storage[client_ip]:
+        oldest_attempt = min(rate_limit_storage[client_ip])
+        reset_time = oldest_attempt + RATE_LIMIT_WINDOW
+        time_until_reset = max(0, int(reset_time - now))
+    else:
+        time_until_reset = 0
+    
+    return {
+        "success": True,
+        "rate_limit_info": {
+            "client_ip": client_ip,
+            "attempts_in_window": attempts_count,
+            "remaining_attempts": remaining_attempts,
+            "window_seconds": RATE_LIMIT_WINDOW,
+            "max_attempts": RATE_LIMIT_REQUESTS,
+            "time_until_reset_seconds": time_until_reset,
+            "is_rate_limited": remaining_attempts == 0
+        }
+    }
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
