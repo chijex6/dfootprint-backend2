@@ -32,6 +32,7 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 origins = [
     "http://localhost:3000",   # Next.js dev server
+    "https://dfootprint-website-2kdu.vercel.app", # Vercel hosted example
 ]
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
