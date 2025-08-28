@@ -31,8 +31,8 @@ load_dotenv()
 # Configuration
 SECRET_KEY = os.getenv("SECRET_KEY")
 origins = [
-    "http://localhost:3000",   # Next.js dev server
-    "https://dfootprint-website.vercel.app", # Vercel hosted example
+    "http://localhost:3000",
+    "https://dfootprint-website.vercel.app",
 ]
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
@@ -555,7 +555,7 @@ async def create_admin(
         current_permissions = {}
     
     # Check if user has admin creation permission or is super admin
-    if not (current_permissions.get("create_admin", False) or current_admin.role == "super_admin"):
+    if not ("edit_product" in current_permissions or current_admin.role == "super admin"):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Insufficient permissions to create admin"
@@ -616,7 +616,7 @@ async def get_admin_stats(
     except json.JSONDecodeError:
         permissions = {}
     
-    if not (permissions.get("view_stats", False) or current_admin.role == "super_admin"):
+    if not ("edit_product" in permissions or current_admin.role == "super admin"):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Insufficient permissions to view stats"
@@ -833,7 +833,7 @@ async def create_product(
     except json.JSONDecodeError:
         permissions = {}
     
-    if not (permissions.get("create_product", False) or current_admin.role == "super_admin"):
+    if not ("edit_product" in permissions or current_admin.role == "super admin"):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Insufficient permissions to create product"
@@ -915,6 +915,7 @@ async def get_products(
                 "description": product.description,
                 "sizes": json.loads(product.sizes) if product.sizes else [],
                 "featured": product.featured,
+                "slug": product.slug,
                 "category": product.category,
                 "created_at": product.created_at,
                 "new": datetime.now(timezone.utc) - (product.created_at.replace(tzinfo=timezone.utc) if product.created_at.tzinfo is None else product.created_at) < timedelta(days=7),
@@ -923,6 +924,7 @@ async def get_products(
                         "url": image.url,
                         "id": image.id,
                         "colourHex": image.colour,
+                        "slug": image.slug,
                         "colourName": image.color_name,
                         "width": image.width,
                         "height": image.height
@@ -953,25 +955,57 @@ async def get_products(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch products: {str(e)}")
 
-@app.get("/products/{product_id}")
-async def get_product(product_id: int, db: Session = Depends(get_db)):
-    """Get a single product by ID"""
+@app.get("/products/{slug}")
+async def get_product(slug: str, db: Session = Depends(get_db)):
+    """Get a single product by slug"""
     try:
-        product = db.query(Product).filter(Product.id == product_id).first()
+        product = db.query(Product).filter(Product.slug == slug).first()
         if not product:
             raise HTTPException(status_code=404, detail="Product not found")
         
-        images = db.query(Product_image).filter(Product_image.product_id == product_id).all()
+        images = db.query(Product_image).filter(Product_image.product_id == product.id).all()
+
+        relatedProduct = db.query(Product).filter(Product.category == product.category, Product.id != product.id).all()
+
+        result = []
+        for related in relatedProduct:
+            related_images = db.query(Product_image).filter(Product_image.product_id == related.id).all()
+            result.append({
+                "id": related.id,
+                "name": related.name,
+                "price": related.price,  # Convert back from cents
+                "description": related.description,
+                "sizes": json.loads(related.sizes) if related.sizes else [],
+                "featured": related.featured,
+                "new": datetime.now(timezone.utc) - (related.created_at.replace(tzinfo=timezone.utc) if related.created_at.tzinfo is None else related.created_at) < timedelta(days=7),
+                "category": related.category,
+                "slug": related.slug,
+                "created_at": related.created_at,
+                "images": [
+                    {
+                        "url": image.url,
+                        "id": image.id,
+                        "colourHex": image.colour,
+                        "slug": image.slug,
+                        "colourName": image.color_name,
+                        "width": image.width,
+                        "height": image.height
+                    }
+                    for image in related_images
+                ]
+            })
 
         return {
             "id": product.id,
             "name": product.name,
-            "price": product.price / 100,  # Convert back from cents
+            "price": product.price,  # Convert back from cents
             "description": product.description,
             "sizes": json.loads(product.sizes) if product.sizes else [],
             "featured": product.featured,
             "new": datetime.now(timezone.utc) - (product.created_at.replace(tzinfo=timezone.utc) if product.created_at.tzinfo is None else product.created_at) < timedelta(days=7),
             "category": product.category,
+            "slug": product.slug,
+            "relatedProducts": result,
             "created_at": product.created_at,
             "images": [
                 {
@@ -979,6 +1013,7 @@ async def get_product(product_id: int, db: Session = Depends(get_db)):
                     "url": image.url,
                     "colourHex": image.colour,
                     "colourName": image.color_name,
+                    "slug": image.slug,
                     "width": image.width,
                     "height": image.height
                 }
@@ -1005,7 +1040,7 @@ async def delete_product(
     except json.JSONDecodeError:
         permissions = {}
     
-    if not (permissions.get("delete_product", False) or current_admin.role == "super_admin"):
+    if not ("edit_product" in permissions or current_admin.role == "super admin"):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Insufficient permissions to delete product"
@@ -1046,7 +1081,7 @@ async def update_product(
     except json.JSONDecodeError:
         permissions = {}
     
-    if not (permissions.get("edit_product", False) or current_admin.role == "super_admin"):
+    if not ("edit_product" in permissions or current_admin.role == "super admin"):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Insufficient permissions to edit product"
@@ -1130,8 +1165,8 @@ async def list_admins(
     db: Session = Depends(get_db)
 ):
     """List all admins (super admin only)"""
-    
-    if current_admin.role != "super_admin":
+
+    if current_admin.role != "super admin":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Only super admin can list all admins"
@@ -1181,8 +1216,8 @@ async def update_admin_permissions(
     db: Session = Depends(get_db)
 ):
     """Update admin permissions (super admin only)"""
-    
-    if current_admin.role != "super_admin":
+
+    if current_admin.role != "super admin":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Only super admin can update permissions"
@@ -1219,7 +1254,7 @@ async def delete_admin(
 ):
     """Delete admin (super admin only, cannot delete self)"""
     
-    if current_admin.role != "super_admin":
+    if current_admin.role != "super admin":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Only super admin can delete admins"
@@ -1292,7 +1327,7 @@ async def get_rate_limit_info(
 ):
     """Get rate limit information for current IP (admin only)"""
     
-    if current_admin.role != "super_admin":
+    if current_admin.role != "super admin":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Only super admin can view rate limit info"
